@@ -1,0 +1,771 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style type="text/css">:root, :host {
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+  --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+  --fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+  --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+  --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+  --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.svg-inline--fa {
+  display: var(--fa-display, inline-block);
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+.svg-inline--fa.fa-2xs {
+  vertical-align: 0.1em;
+}
+.svg-inline--fa.fa-xs {
+  vertical-align: 0em;
+}
+.svg-inline--fa.fa-sm {
+  vertical-align: -0.0714285705em;
+}
+.svg-inline--fa.fa-lg {
+  vertical-align: -0.2em;
+}
+.svg-inline--fa.fa-xl {
+  vertical-align: -0.25em;
+}
+.svg-inline--fa.fa-2xl {
+  vertical-align: -0.3125em;
+}
+.svg-inline--fa.fa-pull-left {
+  margin-right: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-pull-right {
+  margin-left: var(--fa-pull-margin, 0.3em);
+  width: auto;
+}
+.svg-inline--fa.fa-li {
+  width: var(--fa-li-width, 2em);
+  top: 0.25em;
+}
+.svg-inline--fa.fa-fw {
+  width: var(--fa-fw-width, 1.25em);
+}
+
+.fa-layers svg.svg-inline--fa {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fa-layers-counter, .fa-layers-text {
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+}
+
+.fa-layers {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: -0.125em;
+  width: 1em;
+}
+.fa-layers svg.svg-inline--fa {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-text {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.fa-layers-counter {
+  background-color: var(--fa-counter-background-color, #ff253a);
+  border-radius: var(--fa-counter-border-radius, 1em);
+  box-sizing: border-box;
+  color: var(--fa-inverse, #fff);
+  line-height: var(--fa-counter-line-height, 1);
+  max-width: var(--fa-counter-max-width, 5em);
+  min-width: var(--fa-counter-min-width, 1.5em);
+  overflow: hidden;
+  padding: var(--fa-counter-padding, 0.25em 0.5em);
+  right: var(--fa-right, 0);
+  text-overflow: ellipsis;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-counter-scale, 0.25));
+          transform: scale(var(--fa-counter-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-bottom-right {
+  bottom: var(--fa-bottom, 0);
+  right: var(--fa-right, 0);
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.fa-layers-bottom-left {
+  bottom: var(--fa-bottom, 0);
+  left: var(--fa-left, 0);
+  right: auto;
+  top: auto;
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.fa-layers-top-right {
+  top: var(--fa-top, 0);
+  right: var(--fa-right, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.fa-layers-top-left {
+  left: var(--fa-left, 0);
+  right: auto;
+  top: var(--fa-top, 0);
+  -webkit-transform: scale(var(--fa-layers-scale, 0.25));
+          transform: scale(var(--fa-layers-scale, 0.25));
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.fa-1x {
+  font-size: 1em;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+
+.fa-3x {
+  font-size: 3em;
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-5x {
+  font-size: 5em;
+}
+
+.fa-6x {
+  font-size: 6em;
+}
+
+.fa-7x {
+  font-size: 7em;
+}
+
+.fa-8x {
+  font-size: 8em;
+}
+
+.fa-9x {
+  font-size: 9em;
+}
+
+.fa-10x {
+  font-size: 10em;
+}
+
+.fa-2xs {
+  font-size: 0.625em;
+  line-height: 0.1em;
+  vertical-align: 0.225em;
+}
+
+.fa-xs {
+  font-size: 0.75em;
+  line-height: 0.0833333337em;
+  vertical-align: 0.125em;
+}
+
+.fa-sm {
+  font-size: 0.875em;
+  line-height: 0.0714285718em;
+  vertical-align: 0.0535714295em;
+}
+
+.fa-lg {
+  font-size: 1.25em;
+  line-height: 0.05em;
+  vertical-align: -0.075em;
+}
+
+.fa-xl {
+  font-size: 1.5em;
+  line-height: 0.0416666682em;
+  vertical-align: -0.125em;
+}
+
+.fa-2xl {
+  font-size: 2em;
+  line-height: 0.03125em;
+  vertical-align: -0.1875em;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+.fa-ul {
+  list-style-type: none;
+  margin-left: var(--fa-li-margin, 2.5em);
+  padding-left: 0;
+}
+.fa-ul > li {
+  position: relative;
+}
+
+.fa-li {
+  left: calc(var(--fa-li-width, 2em) * -1);
+  position: absolute;
+  text-align: center;
+  width: var(--fa-li-width, 2em);
+  line-height: inherit;
+}
+
+.fa-border {
+  border-color: var(--fa-border-color, #eee);
+  border-radius: var(--fa-border-radius, 0.1em);
+  border-style: var(--fa-border-style, solid);
+  border-width: var(--fa-border-width, 0.08em);
+  padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+}
+
+.fa-pull-left {
+  float: left;
+  margin-right: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-pull-right {
+  float: right;
+  margin-left: var(--fa-pull-margin, 0.3em);
+}
+
+.fa-beat {
+  -webkit-animation-name: fa-beat;
+          animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-bounce {
+  -webkit-animation-name: fa-bounce;
+          animation-name: fa-bounce;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));
+}
+
+.fa-fade {
+  -webkit-animation-name: fa-fade;
+          animation-name: fa-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-beat-fade {
+  -webkit-animation-name: fa-beat-fade;
+          animation-name: fa-beat-fade;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+          animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));
+}
+
+.fa-flip {
+  -webkit-animation-name: fa-flip;
+          animation-name: fa-flip;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+          animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.fa-shake {
+  -webkit-animation-name: fa-shake;
+          animation-name: fa-shake;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+          animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 2s);
+          animation-duration: var(--fa-animation-duration, 2s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, linear);
+          animation-timing-function: var(--fa-animation-timing, linear);
+}
+
+.fa-spin-reverse {
+  --fa-animation-direction: reverse;
+}
+
+.fa-pulse,
+.fa-spin-pulse {
+  -webkit-animation-name: fa-spin;
+          animation-name: fa-spin;
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+          animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+          animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+          animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, steps(8));
+          animation-timing-function: var(--fa-animation-timing, steps(8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fa-beat,
+.fa-bounce,
+.fa-fade,
+.fa-beat-fade,
+.fa-flip,
+.fa-pulse,
+.fa-shake,
+.fa-spin,
+.fa-spin-pulse {
+    -webkit-animation-delay: -1ms;
+            animation-delay: -1ms;
+    -webkit-animation-duration: 1ms;
+            animation-duration: 1ms;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+    -webkit-transition-duration: 0s;
+            transition-duration: 0s;
+  }
+}
+@-webkit-keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@keyframes fa-beat {
+  0%, 90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  45% {
+    -webkit-transform: scale(var(--fa-beat-scale, 1.25));
+            transform: scale(var(--fa-beat-scale, 1.25));
+  }
+}
+@-webkit-keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes fa-bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+            transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+            transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));
+  }
+  50% {
+    -webkit-transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+            transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+            transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+@-webkit-keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@keyframes fa-fade {
+  50% {
+    opacity: var(--fa-fade-opacity, 0.4);
+  }
+}
+@-webkit-keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@keyframes fa-beat-fade {
+  0%, 100% {
+    opacity: var(--fa-beat-fade-opacity, 0.4);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(var(--fa-beat-fade-scale, 1.125));
+            transform: scale(var(--fa-beat-fade-scale, 1.125));
+  }
+}
+@-webkit-keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@keyframes fa-flip {
+  50% {
+    -webkit-transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+            transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
+  }
+}
+@-webkit-keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fa-shake {
+  0% {
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  4% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  8%, 24% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  12%, 28% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  16% {
+    -webkit-transform: rotate(-22deg);
+            transform: rotate(-22deg);
+  }
+  20% {
+    -webkit-transform: rotate(22deg);
+            transform: rotate(22deg);
+  }
+  32% {
+    -webkit-transform: rotate(-12deg);
+            transform: rotate(-12deg);
+  }
+  36% {
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+  40%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.fa-rotate-90 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.fa-rotate-180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fa-rotate-270 {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.fa-flip-horizontal {
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.fa-flip-vertical {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+}
+
+.fa-flip-both,
+.fa-flip-horizontal.fa-flip-vertical {
+  -webkit-transform: scale(-1, -1);
+          transform: scale(-1, -1);
+}
+
+.fa-rotate-by {
+  -webkit-transform: rotate(var(--fa-rotate-angle, none));
+          transform: rotate(var(--fa-rotate-angle, none));
+}
+
+.fa-stack {
+  display: inline-block;
+  vertical-align: middle;
+  height: 2em;
+  position: relative;
+  width: 2.5em;
+}
+
+.fa-stack-1x,
+.fa-stack-2x {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--fa-stack-z-index, auto);
+}
+
+.svg-inline--fa.fa-stack-1x {
+  height: 1em;
+  width: 1.25em;
+}
+.svg-inline--fa.fa-stack-2x {
+  height: 2em;
+  width: 2.5em;
+}
+
+.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}
+
+.sr-only,
+.fa-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only-focusable:not(:focus),
+.fa-sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.svg-inline--fa .fa-primary {
+  fill: var(--fa-primary-color, currentColor);
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa .fa-secondary {
+  fill: var(--fa-secondary-color, currentColor);
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-primary {
+  opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.svg-inline--fa.fa-swap-opacity .fa-secondary {
+  opacity: var(--fa-primary-opacity, 1);
+}
+
+.svg-inline--fa mask .fa-primary,
+.svg-inline--fa mask .fa-secondary {
+  fill: black;
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+  color: var(--fa-inverse, #fff);
+}</style><link rel="preload" href="/_next/static/media/5c0c2bcbaa4149ca-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" href="/_next/static/media/904be59b21bd51cb-s.p.woff2" as="font" crossorigin="" type="font/woff2"><link rel="preload" as="image" href="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-red.svg"><link rel="preload" as="image" href="/teaser/blueEnvelope.svg" fetchpriority="high"><link rel="preload" as="image" href="/teaser/greenEnvelope.svg" fetchpriority="high"><link rel="preload" as="image" href="/map.svg"><link rel="preload" as="image" href="/map_desktop.svg"><link rel="preload" as="image" href="/Provide/food.svg"><link rel="preload" as="image" href="/Provide/sleeping.svg"><link rel="preload" as="image" href="/Provide/sponsors.svg"><link rel="preload" as="image" href="/hackupcLogoWhite.svg"><link rel="preload" as="image" href="/Sponsors/bending_spoons.svg"><link rel="stylesheet" href="/_next/static/css/a3d2f16f30da9e60.css" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/33d6722493706b1c.css" data-precedence="next"><link rel="stylesheet" href="/_next/static/css/c2cec86bb0998565.css" data-precedence="next"><link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/webpack-fe256a069f5b39e8.js"><script async="" src="https://www.clarity.ms/tag/kzqhp8jv6l"></script><script src="/_next/static/chunks/fd9d1056-faca5e55fb7642b2.js" async=""></script><script src="/_next/static/chunks/117-5949527e77b12dba.js" async=""></script><script src="/_next/static/chunks/main-app-f1e2f05f66ca4fbd.js" async=""></script><script src="/_next/static/chunks/870fdd6f-e317f94c497f374a.js" async=""></script><script src="/_next/static/chunks/69b09407-12a8fce1f9baf50a.js" async=""></script><script src="/_next/static/chunks/528-26944035b6fb8900.js" async=""></script><script src="/_next/static/chunks/app/page-67debbae62488b6b.js" async=""></script><script src="/_next/static/chunks/app/layout-f60490ec120b2951.js" async=""></script><script src="/_next/static/chunks/app/not-found-1ad5ccb5d0d2b11c.js" async=""></script><link rel="preload" href="https://cdn-cookieyes.com/client_data/f0da360b52ebfbe361cbc559/script.js" as="script"><link rel="preload" as="image" href="/Sponsors/jetbrains.svg"><link rel="preload" as="image" href="/Partners/upc.svg"><link rel="preload" as="image" href="/Partners/fib.svg"><link rel="preload" as="image" href="/Partners/telecos.png"><link rel="preload" as="image" href="/Partners/cfis.svg"><link rel="preload" as="image" href="/Partners/mlh.svg"><link rel="preload" as="image" href="/Partners/coeinf.png"><link rel="preload" href="https://www.googletagmanager.com/gtag/js?id=G-WFBH19BZ64" as="script"><link rel="preload" href="https://easter-egg.hackupc.com/index.js" as="script"><title>HackUPC 2026 | April 24-26 | Student hackathon in Barcelona</title><meta name="description" content="Student hackathon in Barcelona on April 24-26 for 36 hours"><link rel="author" href="https://hackersatupc.org/"><meta name="author" content="Hackers@UPC"><meta name="keywords" content="Hackathon, Hacker, Student, University, College, Programming, Technology, UPC, Barcelona, Spain"><meta property="og:title" content="HackUPC 2026 | April 24-26 | Student hackathon Barcelona"><meta property="og:description" content="36 hours student hackathon in Barcelona in April starting on the 24th ending the 26th"><meta property="og:url" content="https://hackupc.com"><meta property="og:site_name" content="HackUPC"><meta property="og:locale" content="en_GB"><meta property="og:image" content="https://hackupc.com/og_image2026.png"><meta property="og:image:secure_url" content="https://hackupc.com/og_image2026.png"><meta property="og:image:alt" content="HackUPC landing page screenshot"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hackupc"><meta name="twitter:creator" content="@hackupc"><meta name="twitter:title" content="HackUPC 2026 | April 24-26 | Student hackathon Barcelona"><meta name="twitter:description" content="36 hours student hackathon in Barcelona in April starting on the 24th ending the 26th"><meta name="twitter:image" content="https://hackupc.com/og_image2026.png"><meta name="twitter:image:secure_url" content="https://hackupc.com/og_image2026.png"><meta name="twitter:image:alt" content="HackUPC 2026 | April 24-26 | Student hackathon in Barcelona"><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48"><meta name="next-size-adjust"><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script><style data-styled="active" data-styled-version="6.1.8"></style><script src="https://cdn-cookieyes.com/client_data/f0da360b52ebfbe361cbc559/banner.js" async="" id="cookieyes-banner"></script></head><body class="__className_069ab3"><a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/eu?utm_source=eu-hackathon&amp;utm_medium=TrustBadge&amp;utm_campaign=2026-season&amp;utm_content=red" target="_blank" rel="noreferrer"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-red.svg" alt="Major League Hacking 2026 Hackathon Season" style="width:100%;filter:brightness(0.85) saturate(0.7)"></a><main><div class="sc-c1c15fcf-0 iLWbbB"><div class="sc-c1c15fcf-1 hHRmvz"><img alt="hackupc-logo" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent" src="/hackupcLogoWhite.svg">HackUPC</div><a href="https://my.hackupc.com/" target="_blank" rel="noopener noreferrer" class="sc-feeb4a4b-4 sc-c1c15fcf-2 dtHcTF izQopS __className_c1a059">Login</a></div><div class="sc-770f12dc-1 hKVOxq"><div class="sc-770f12dc-2 bTkiwG"><div class="sc-770f12dc-3 ldumul"><img alt="Dragon Frame 1" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/drac_1.svg"></div><div class="sc-770f12dc-3 ldumul"><img alt="Dragon Frame 2" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/drac_2.svg"></div></div></div><div class="sc-770f12dc-0 cnnlys"><div class="sc-770f12dc-4 sc-770f12dc-5 ivRVWQ ggOkBI"><img alt="Cloud" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/cloud.svg"></div><div class="sc-770f12dc-4 sc-770f12dc-7 ivRVWQ bIWvFr"><img alt="Cloud" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/cloud.svg"></div><div class="sc-770f12dc-4 sc-770f12dc-8 ivRVWQ gOupmv"><img alt="Cloud" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/cloud.svg"></div><div class="sc-770f12dc-4 sc-770f12dc-6 ivRVWQ kfuSSX"><img alt="Cloud" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/cloud.svg"></div><div class="sc-770f12dc-9 dDbvdU"><div class="sc-770f12dc-10 kPuXZf"><img alt="Hack UPC" loading="lazy" width="700" height="260" decoding="async" data-nimg="1" style="color:transparent" src="/main_logo_desktop.svg"></div><div class="sc-770f12dc-11 eBQSyM"><img alt="Hack UPC" loading="lazy" width="374" height="170" decoding="async" data-nimg="1" style="color:transparent" src="/main_logo.svg"></div></div><div class="sc-770f12dc-12 ifJdXZ"><div class="sc-770f12dc-13 eIRyKw"><div class="sc-770f12dc-14 iNaFJU"><img alt="Choose character" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/choose_character.svg"></div></div><div class="sc-770f12dc-15 dWqEbx"><a href="https://my.hackupc.com/user/signup/hacker/" target="_blank" class="sc-770f12dc-16 gihjKz"><div class="sc-770f12dc-17 icspfc"><img alt="Arch" loading="lazy" decoding="async" data-nimg="fill" class="sc-770f12dc-18 gZUFvA" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/arch.svg"><img alt="" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" class="sc-770f12dc-19 eDuSsj" style="color:transparent" src="/cavaller.svg"></div><div class="sc-770f12dc-20 jdkuhI">HACKER</div></a><a href="https://my.hackupc.com/user/signup/volunteer/" target="_blank" class="sc-770f12dc-16 gihjKz"><div class="sc-770f12dc-17 icspfc"><img alt="Arch" loading="lazy" decoding="async" data-nimg="fill" class="sc-770f12dc-18 gZUFvA" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/arch.svg"><img alt="" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" class="sc-770f12dc-19 eDuSsj" style="color:transparent" src="/princesa.svg"></div><div class="sc-770f12dc-20 jdkuhI">VOLUNTEER</div></a></div></div></div><div id="about"><div class="sc-cf7b746d-1 sc-10000197-0 enfhEk hUsPHh"><div class="sc-cf7b746d-2 sc-10000197-2 ijYmbk kqDbeU __className_069ab3"><div class="sc-feeb4a4b-0 sc-10000197-1 hErPPE hxQDRm __className_c1a059">HackUPC:<span class="break"><br></span> <!-- -->code the legend</div><div class="sc-10000197-3 fTLfkJ"><div class="sc-10000197-4 bzROMc"><div class="sc-10000197-5 jhFeyS"><img alt="Dragon" loading="lazy" width="200" height="200" decoding="async" data-nimg="1" style="color:transparent" src="/drac_1.svg"></div><div color="#000000" class="sc-feeb4a4b-1 heXYoE">What is a<!-- --> <span style="color:#B85353;font-weight:bold">hackathon</span>?</div><div class="sc-feeb4a4b-3 sc-10000197-8 gKkxHZ eEZUDT">The word hackathon is a combination of the words "<b class="sc-10000197-6 dlBDPZ">HACK</b>", standing for creative problem-solving, and <b class="sc-10000197-6 dlBDPZ">"MARATHON"</b>. These are awesome events full of creativity, technology, and passionate tech-related students of different skill ranges collaborating and creating. During a certain period of time, attendees work in <b class="sc-10000197-6 dlBDPZ">TEAMS</b> to develop apps, games, robots… literally anything you want to<!-- --> <b class="sc-10000197-6 dlBDPZ">BUILD &amp; LEARN</b> about!</div></div><div class="sc-10000197-4 bzROMc"><div style="margin:25px;margin-bottom:41px" class="sc-10000197-5 jhFeyS"> <img alt="HackUPC Logo" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/hackupcLogoInGreenFlag.svg"></div><div color="#000000" class="sc-feeb4a4b-1 heXYoE">About<!-- --> <span style="color:#75AA7E;font-weight:bold">HackUPC</span></div><div class="sc-feeb4a4b-3 sc-10000197-8 gKkxHZ eEZUDT"><b class="sc-10000197-7 kvayiC">HackUPC</b> is the first student<!-- --> <b class="sc-10000197-7 kvayiC">hackathon</b> in Spain and the biggest one in Europe. Once a year, we aim to provide participants of<b class="sc-10000197-7 kvayiC"> all experience levels</b> from<!-- --> <b class="sc-10000197-7 kvayiC">all around the world</b> with a space where they can<!-- --> <b class="sc-10000197-7 kvayiC">improve and learn new skills</b>,<!-- --> <b class="sc-10000197-7 kvayiC">meet amazing people</b>, and have a<!-- --> <b class="sc-10000197-7 kvayiC">great experience</b>!</div></div></div></div></div></div><div class="sc-ade60279-0 ddUeBy"><div id="howtoparticipate" class="sc-cf7b746d-1 enfhEk"><div class="sc-feeb4a4b-0 sc-ade60279-1 hErPPE hriBhw __className_c1a059">How to Participate</div><div class="sc-ade60279-2 gQrrwM"><div class="sc-ade60279-3 hHuBPd"><svg viewBox="0 0 341 382" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="sc-ade60279-4 ketNtU"><defs><filter id="shadow" x="0" y="0" width="100%" height="100%"><feOffset dx="0" dy="4" in="SourceAlpha" result="offsetblur"></feOffset><feComponentTransfer in="offsetblur" result="shadow"><feFuncA type="linear" slope="1"></feFuncA></feComponentTransfer><feMerge><feMergeNode in="shadow"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g filter="url(#shadow)"><path d="M4 0H333V293L333 370L168.5 293L4 370L4 293V0Z" fill="#A36FAE"></path></g></svg><div class="sc-ade60279-5 biiDXR"><h3 class="sc-ade60279-6 cMvpwF __className_069ab3">Mentor</h3><div class="sc-feeb4a4b-3 sc-ade60279-7 gKkxHZ lgpHUB __className_069ab3">Help and motivate hackers with your knowledge! If you are passionate about helping, and you can no longer apply as a hacker, we invite you to live the hackathon experience from the other side: Apply as a mentor!</div><a class="sc-d05449b2-0 sc-d05449b2-1 sc-ade60279-8 kLZQrI xYrcw ftCiHu __className_069ab3" href="https://my.hackupc.com/user/signup/mentor/" target="_blank">Apply Now</a></div></div><div class="sc-ade60279-3 hHuBPd"><svg viewBox="0 0 341 382" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="sc-ade60279-4 ketNtU"><defs><filter id="shadow" x="0" y="0" width="100%" height="100%"><feOffset dx="0" dy="4" in="SourceAlpha" result="offsetblur"></feOffset><feComponentTransfer in="offsetblur" result="shadow"><feFuncA type="linear" slope="1"></feFuncA></feComponentTransfer><feMerge><feMergeNode in="shadow"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g filter="url(#shadow)"><path d="M4 0H333V293L333 370L168.5 293L4 370L4 293V0Z" fill="#B85353"></path></g></svg><div class="sc-ade60279-5 biiDXR"><h3 class="sc-ade60279-6 cMvpwF __className_069ab3">Volunteer</h3><div class="sc-feeb4a4b-3 sc-ade60279-7 gKkxHZ lgpHUB __className_069ab3">Volunteers make HackUPC possible by assisting the hackers and preparing the event. By joining our team of volunteers, you will get to know how this incredible event works from the inside, meet amazing people and live a great experience!</div><a class="sc-d05449b2-0 sc-d05449b2-1 sc-ade60279-8 kLZQrI xYrcw ftCiHu __className_069ab3" href="https://my.hackupc.com/user/signup/volunteer/" target="_blank">Apply now</a></div></div><div class="sc-ade60279-3 hHuBPd"><svg viewBox="0 0 341 382" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="sc-ade60279-4 ketNtU"><defs><filter id="shadow" x="0" y="0" width="100%" height="100%"><feOffset dx="0" dy="4" in="SourceAlpha" result="offsetblur"></feOffset><feComponentTransfer in="offsetblur" result="shadow"><feFuncA type="linear" slope="1"></feFuncA></feComponentTransfer><feMerge><feMergeNode in="shadow"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g filter="url(#shadow)"><path d="M4 0H333V293L333 370L168.5 293L4 370L4 293V0Z" fill="#3880B1"></path></g></svg><div class="sc-ade60279-5 biiDXR"><h3 class="sc-ade60279-6 cMvpwF __className_069ab3">Partner</h3><div class="sc-feeb4a4b-3 sc-ade60279-7 gKkxHZ lgpHUB __className_069ab3">Gain visibility for your brand, introduce your products to future talents. Join us and be remembered as part of this hackathon by our participants!</div><a class="sc-d05449b2-0 sc-d05449b2-1 sc-ade60279-8 kLZQrI xYrcw ftCiHu __className_069ab3" href="mailto:logistics@hackupc.com">Contact us</a></div></div><div class="sc-ade60279-3 hHuBPd"><svg viewBox="0 0 341 382" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" class="sc-ade60279-4 ketNtU"><defs><filter id="shadow" x="0" y="0" width="100%" height="100%"><feOffset dx="0" dy="4" in="SourceAlpha" result="offsetblur"></feOffset><feComponentTransfer in="offsetblur" result="shadow"><feFuncA type="linear" slope="1"></feFuncA></feComponentTransfer><feMerge><feMergeNode in="shadow"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g filter="url(#shadow)"><path d="M4 0H333V293L333 370L168.5 293L4 370L4 293V0Z" fill="#75AA7E"></path></g></svg><div class="sc-ade60279-5 biiDXR"><h3 class="sc-ade60279-6 cMvpwF __className_069ab3">Sponsor</h3><div class="sc-feeb4a4b-3 sc-ade60279-7 gKkxHZ lgpHUB __className_069ab3">Don't just put your brand on another wall. Take the chance to shape the tech scene of tomorrow by adding real value and making it possible for hackers to build something they're proud of.</div><a class="sc-d05449b2-0 sc-d05449b2-1 sc-ade60279-8 kLZQrI xYrcw ftCiHu __className_069ab3" href="mailto:sponsor@hackupc.com">Contact us</a></div></div></div></div></div><div class="sc-cf7b746d-1 sc-7445a955-3 enfhEk kEXoHH"><div style="padding-left:0;padding-right:0" class="sc-cf7b746d-1 enfhEk"><div class="sc-7445a955-1 beXgNV"><div class="sc-7445a955-4 aNFCO"><div class="sc-feeb4a4b-0 sc-7445a955-7 hErPPE kIdTYy __className_c1a059" style="color:#191937">Teaser</div><div class="sc-7445a955-5 iPdKxw"><img alt="Open teaser" fetchpriority="high" width="500" height="350" decoding="async" data-nimg="1" class="sc-7445a955-2 dZaZfQ" style="color:transparent;z-index:1" src="/teaser/blueEnvelope.svg"></div></div><div class="sc-7445a955-4 aNFCO"><div class="sc-feeb4a4b-0 sc-7445a955-7 hErPPE kIdTYy __className_c1a059" style="color:#2C5332">Aftermovie</div><div class="sc-7445a955-5 iPdKxw"><img alt="Open aftermovie" fetchpriority="high" width="500" height="350" decoding="async" data-nimg="1" class="sc-7445a955-2 dZaZfQ" style="color:transparent;z-index:1" src="/teaser/greenEnvelope.svg"></div></div></div></div></div><div id="during" class="sc-cf7b746d-1 sc-f37da3b6-0 enfhEk iIrxuX"><div class="sc-feeb4a4b-0 sc-f37da3b6-1 hErPPE hDqKRc __className_c1a059">DURING THE EVENT</div><div class="sc-feeb4a4b-3 sc-f37da3b6-2 gKkxHZ iMiMf">Coding is the main part of HackUPC, but we have many more activities!</div><img src="/map.svg" alt="Map Mobile" class="sc-f37da3b6-6 sc-f37da3b6-7 gMjrsd bGvnbA"><img src="/map_desktop.svg" alt="Map Desktop" class="sc-f37da3b6-6 sc-f37da3b6-8 gMjrsd ckkTOV"><div class="sc-f37da3b6-5 igURDK"><div class="sc-feeb4a4b-0 sc-f37da3b6-9 hErPPE fBrXoD __className_c1a059"><div class="sc-f37da3b6-3 jLnDsc"><div class="sc-f37da3b6-4 kiRlsP __className_c1a059">THE MISSION: HACKUPC</div></div><div class="sc-feeb4a4b-3 gKkxHZ">Your weekend quest awaits! This year, HackUPC becomes a medieval adventure filled with challenges to conquer. Forge your own path by overcoming mighty trials, and see if you can rise as a true hero. Will your legend be told in generations?</div></div></div></div><div id="live" class="sc-cf7b746d-1 enfhEk"><div class="sc-bf05f4d8-5 hXSltL"><div class="sc-feeb4a4b-0 sc-bf05f4d8-1 hErPPE fnlzO __className_c1a059"><div class="sc-bf05f4d8-2 dbwzyB"></div>Live</div><div class="sc-bf05f4d8-0 MXVte"><div style="margin-bottom:8px" class="sc-feeb4a4b-5 dQQvzF">When and where will all of this happen?</div><div class="sc-feeb4a4b-3 gKkxHZ">In our live page you will find it out! It will be available before HackUPC so that you can prepare everything you might need! And of course it will be the page you visit to check out all the activities happening during the event. You can also check our<!-- --> <a href="https://2024-live.hackupc.com/" target="_blank" class="sc-bf05f4d8-3 hQSPXR"> <!-- -->last year's live page</a> <!-- -->page and see what happened.</div></div><a target="_blank" rel="noreferrer" class="sc-bf05f4d8-4 bAEcUc __className_c1a059">Not available yet</a></div></div><div id="provide" class="sc-a8686945-0 fPvaCp"><div class="sc-cf7b746d-1 enfhEk"><div class="sc-feeb4a4b-0 sc-a8686945-1 hErPPE jZDlBE __className_c1a059">We Also Provide</div><div class="sc-a8686945-2 jcITSr"><div class="sc-a8686945-3 iKbsEe"><img src="/Provide/food.svg" alt="Food" class="sc-a8686945-4 gxNxsI"><div class="sc-a8686945-5 sc-a8686945-6 cFPa-Dv lhAYHj"><div class="sc-feeb4a4b-3 sc-a8686945-10 gKkxHZ gbVNvH __className_069ab3">We've got you covered, we even have midnight snacks. Throughout the event there will be snacks, drinks, and coffee to revive your energy.</div></div><div class="sc-a8686945-9 gVmImB __className_069ab3">Food</div></div><div class="sc-a8686945-3 iKbsEe"><img src="/Provide/sleeping.svg" alt="Sleeping" class="sc-a8686945-4 gxNxsI"><div class="sc-a8686945-5 sc-a8686945-7 cFPa-Dv eJuSKa"><div class="sc-feeb4a4b-3 sc-a8686945-10 gKkxHZ gbVNvH __className_069ab3">We will provide some air mattresses both nights so you may descend into a deep slumber. While supplies last! Check out the<!-- --> <a href="#faqs" class="sc-feeb4a4b-4 sc-a8686945-11 dtHcTF hJnyRD">FAQs</a> for more info.</div></div><div class="sc-a8686945-9 llQzzx __className_069ab3">Sleeping</div></div><div class="sc-a8686945-3 iKbsEe"><img src="/Provide/sponsors.svg" alt="Sponsors" class="sc-a8686945-4 gxNxsI"><div class="sc-a8686945-5 sc-a8686945-8 cFPa-Dv jceUEv"><div class="sc-feeb4a4b-3 sc-a8686945-10 gKkxHZ gbVNvH __className_069ab3">You can also visit our sponsors' stands or meet them remotely! They'll be available during the day and would love to talk to you! (You might get some swag as well)</div></div><div class="sc-a8686945-9 jaQdFr __className_069ab3">Sponsors</div></div></div></div></div><div id="faqs" class="sc-cf7b746d-1 enfhEk"><div class="sc-b3d01649-0 cRFBsk"><div class="sc-feeb4a4b-0 sc-b3d01649-1 hErPPE hhBMfC __className_c1a059">FAQs</div></div><div class="sc-b3d01649-2 emrczw"><div class="sc-b3d01649-3 bZhxUK"><div class="sc-b3d01649-4 gqFGkk"><div class="sc-feeb4a4b-1 sc-b3d01649-22 kIcLVX dwPqA-D">About HackUPC</div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What is HackUPC?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">HackUPC is the first student hackathon in Spain. This will be our eleventh edition with lots of side activities to learn new technologies, meet interesting people and have fun. Come and make history with us!</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">When is HackUPC?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">The opening ceremony starts at 7:00 p.m. on Friday, April 24th. We expect to close this year’s edition by 5:00 p.m. on Sunday, April 26th.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Where is HackUPC?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">HackUPC will take place in </div><a href="https://maps.app.goo.gl/gswQC6tZYXqQ53aj8" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">UPC’s North Campus</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"> FIB and ETSETB buildings (A3, A4, A5 and A6) in sunny Barcelona. Expect temperatures from 15ºC to 25ºC!</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What does HackUPC provide?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">HackUPC is free for all accepted hackers. We will provide you with Wi-Fi, swag, workspaces with power outlets (Type F plug), and meals (including breakfast, lunch, dinner, and snacks during the night). There will be access to the showers in a specific schedule (they will be in the gym so if you don't like shared showers, bring also a swimming suit). For the nights we will have mattresses to relax in the sleep-enabled classrooms (there will not be one mattress per person).</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What can I build?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">You can build any tech-related project. We do not have restrictions over the topic. Some examples are web pages, mobile apps, hardware projects, games, an API... Remember that you can also use a variety of hardware components, from Arduino kits and Raspberry Pi's, to Amazon Echo dots and Myo Arm. Once the event starts you will have the catalogue will all the available hardware on </div><a href="https://my.hackupc.com" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">my.hackupc.com</a></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What should I bring?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">All attendees must bring the following:</div><ul><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Valid government ID for admission</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Laptop &amp; charger (Be aware that Spain has Type F plugs, bring an adapter!)</div></li></ul></div><div><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Other common checklist items include:</div><ul><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Sleeping bag</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Comfortable clothes</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Towel, flip-flops, soap, and if you want also a swimming suit (the showers are shared). We encourage all the hackers to take a shower!</div></li></ul></div><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">We will send you a more detailed checklist once you’re accepted.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What are the judging criteria?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Projects will mainly be judged based on technical difficulty, innovation, overall learning experience, and also, on their usability and design by a panel of selected judges from the industry. Check our competition rules on our </div><a href="https://live.hackupc.com/" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">live page</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What if I have any dietary restrictions?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Since beta 1.0, we’ve been able to support a range of dietary preferences, including vegan, vegetarian, gluten-free, and any type of allergies. If you have any specific requirements different than allergies, just select vegetarian or reach out to us and we’ll make sure to take care of you!</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Do you have a code of conduct?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Yes, here they are: Our </div><a href="https://legal.hackersatupc.org/hackupc/code_of_conduct" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">Code of conduct</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"> and also </div><a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">MLH code of conduct.</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><br><br>TL;DR: Be respectful, harassment and abuse are never tolerated.</div></div></div></div></div></div></div><div class="sc-b3d01649-4 gqFGkk"><div class="sc-feeb4a4b-1 sc-b3d01649-22 kIcLVX dwPqA-D">Travel Reimbursement</div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Is travel reimbursement available?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Of course! The quantity varies depending on where you come from. We pay half of the travel costs, with a maximum of €50 for Spaniards outside of Catalonia, up to €120 if you are coming from Europe and up to a range between €120 and €200 if you come from outside Europe. We want to give all of you the opportunity to join us! However, note that not all participants will be eligible to receive travel reimbursement. In the end, we have a limited budget, and we want to help our participants, but we are a student organization and we have limited resources.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">When and how do I request it?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">All the process will happen through </div><a href="https://my.hackupc.com" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">my.hackupc.com</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">. Once you are accepted to the hackathon, you will need to confirm your spot. At that moment, you will be able to ask for travel reimbursement. Select the option if you want to request it. In case the option doesn't show, that means that we have run out of travel reimbursement. After that, you will need to submit the tickets for your travel expenses, note that we only accept tickets from plane, train, or bus with a minimum total amount of €50.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Travel reimbursement conditions and steps</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">To be eligible for Travel Reimbursement, participants must meet all of the following criteria:</div><ol><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Confirmation &amp; Receipts</b>:<br>• After confirming your spot at HackUPC, you must upload your travel receipts (plane, train, or bus) before the start of the event.<br>• Receipts must be in your name and include price breakdown, purchase date, and travel dates.</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Travel Dates</b>:<br>• Travel dates must be within one week before or one week after the event, i.e. from April 21st to May 5th (both included).</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Reimbursement Amount</b>:<br>• The reimbursed amount will be the minimum between 50% of your travel expenses and the maximum amount assigned to your destination, determined by the organizing team based on budget and demand.</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Project Requirements</b>:<br>• You must demo a valid project to the HackUPC judges (presenting only to sponsors is not sufficient).<br>• The project must follow all HackUPC rules.<br>• Your Devpost username must reasonably resemble your real name.<br>• The GitHub repository and Devpost completeness will be evaluated (e.g. regular commits, all required Devpost sections).</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Attendance</b>:<br>• You must be able to demonstrate active participation and minimum attendance at the event. Participation in meals, workshops, activities, and other official events may be considered.</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Post-Event</b>:<br>• After the hackathon, you must upload your Devpost link to the platform.</div></li></ol></div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">When do I get the money?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">If you have followed the steps correctly, you may receive the money in your PayPal account around 2 months after HackUPC. We are sorry for the delay, but it takes time to check everything.</div></div></div></div></div></div></div></div><div class="sc-b3d01649-3 bZhxUK"><div class="sc-b3d01649-4 sc-b3d01649-5 gqFGkk bFOdLo"><div class="sc-feeb4a4b-1 sc-b3d01649-22 kIcLVX dwPqA-D">Applications</div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Who can attend?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Students from all around the world who are at least 14 years old at the time of the event can apply. You can be in the university, vocational training, high school, etc. For participants under 18, we will request a letter of approval signed by parents or a legal guardian to attend.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What if I am not a student?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">As long as you graduated a year before the event (April 24th, 2025), or later, you can still be accepted as a hacker. Nevertheless, if that isn't your case, and you don't want to miss HackUPC, you can apply as a mentor!</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What if I don't have coding experience?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">It's completely fine! We would love to receive your application! In fact, you come here to learn, so you don't need any previous experience.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">How to make a good application?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Try to make a difference amongst other hackers, tell us why you want to come to HackUPC, and avoid generating a default answer with an AI, as that will probably void your application, be creative and don't use AI! However, above all, remember to be humble. </div><a href="https://medium.com/@hackupc/the-application-process-44853805521f" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">On our Medium page</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">, you can find a great post in which are detailed all the steps to make your application even greater. Make sure you check it out!</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">When will I be accepted?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">All your applications are reviewed one by one, by the organizing team. We will do batches of acceptance once a bunch of them are reviewed, stay tuned to our social media to know when this happens and check your email or </div><a href="https://my.hackupc.com" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">MyHackUPC dashboard</a></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Why have I not been accepted yet?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">As mentioned before, all your applications are reviewed one by one, by the organizing team. Check out your status in </div><a href="https://my.hackupc.com" target="_blank" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">MyHackUPC dashboard</a><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">.<br><br></div><div><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">The status can be:</div><ul><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Under review</b>, your application is being reviewed by our team, stay patient and make sure you've done a good application</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Action required</b>, there is a problem with your application, please check your email and spam folder, a member of our team may have contacted you</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Waitlisted</b>, we are sorry to inform that by now we ran out of spots, but if we have an available spot in the future we will let you know</div></li><li><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ"><b>Expired</b>, email us to see if there is still a spot available for you.</div></li></ul></div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">How does applying in teams work?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">When you apply, you can create or join a team. Remember that you're able to change your decision up until you, or someone in your team, is accepted. Once the team has one acceptance, you can not change the members.<br><br>When more than 50% of the team members are accepted, the remaining ones are automatically accepted.<br><br>Note that teams created in the registration are not definitive, so you can change your team during the hackathon.<br><br></div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What if, in the application, I can not join my friends' team?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">If someone in your team has already been accepted you will not be able to join their team. But don’t worry! If you cannot join your friends in the application, it doesn't mean that you can not join them during the event. But remember that the maximum size team is 4 people.</div></div></div></div></div></div></div><div class="sc-b3d01649-4 gqFGkk"><div class="sc-feeb4a4b-1 sc-b3d01649-22 kIcLVX dwPqA-D">Teams</div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What if I don't have a team?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">No need to worry! Part of the fun of a hackathon is meeting new people. We will have a team building activity at the beginning of the event for everyone to meet and form teams.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">What is the max team size?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">If myTeam.size() &lt;= 4, you're good to go.<br><br>Teams up to 4 members are welcome. Keep in mind that if your team is bigger, you won't be able to participate in any HackUPC competition or challenge, so you should split into multiple teams.</div></div></div></div></div></div><div class="sc-b3d01649-6 jCRDUN"><div class="sc-b3d01649-7 bhfIIw"><div class="sc-b3d01649-8 hnhIzD"><img alt="support left" side="left" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 cZpWlI" style="color:transparent" src="/suport.svg"><img alt="support right" side="right" loading="lazy" width="15" height="55" decoding="async" data-nimg="1" class="sc-b3d01649-9 jhpOv" style="color:transparent" src="/suport.svg"><div class="sc-b3d01649-15 hQtjgX"><div class="sc-b3d01649-16 hcruBz"><img alt="torch" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="sc-b3d01649-18 extJfK" style="color:transparent" src="/torch.svg"></div><div class="sc-feeb4a4b-5 sc-b3d01649-19 dQQvzF fGZBXo">Can I change my team during the hackathon? How?</div></div></div><div class="sc-b3d01649-10 djbhbX"><div class="sc-b3d01649-11 dpIGyG"><div class="sc-b3d01649-12 jcwdTp"><img alt="answer image" loading="lazy" decoding="async" data-nimg="fill" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" src="/innerimage.svg"></div><div class="sc-b3d01649-13 jiRhrL"><div style="color:#5B5340" class="sc-feeb4a4b-3 gKkxHZ">Yes, in fact, we encourage you to team up with hackers you meet there. You'll meet awesome people!<br><br>To change your team, you don’t have to notify us, just adjust your team members in the final project submission.</div></div></div></div></div></div></div></div></div><div class="sc-b3d01649-21 jYLEdh"><div class="sc-feeb4a4b-1 sc-b3d01649-22 sc-b3d01649-23 kIcLVX dwPqA-D jrCaRi __className_c1a059">What if I have another question?</div><div class="sc-b3d01649-8 sc-b3d01649-14 hnhIzD cUqxgY"><div style="color:#FFFFFF;text-align:center" class="sc-feeb4a4b-3 gKkxHZ">DM us on Instagram at @hackupc or, if you want to contact us via email, drop us a line at<!-- --> <a href="mailto:contact@hackupc.com" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">contact@hackupc.com</a></div><div style="color:#FFFFFF;text-align:center" class="sc-feeb4a4b-3 gKkxHZ">If your issue is related to Travel Reimbursement, write us at<!-- --> <a href="mailto:reimbursements@hackupc.com" class="sc-feeb4a4b-4 sc-b3d01649-20 dtHcTF hLNxji">reimbursements@hackupc.com</a></div></div></div></div><div id="socials" class="sc-cf7b746d-1 enfhEk"><div class="sc-cf7b746d-2 ijYmbk"><div class="sc-ea1124bc-5 hBCqtL"><img alt="Biene dragon" loading="lazy" width="102" height="168" decoding="async" data-nimg="1" style="color:transparent" src="/bieneDragon.svg"></div><div class="sc-feeb4a4b-0 sc-ea1124bc-0 hErPPE eCaPNf __className_c1a059">Stay tuned, and don't miss a bit</div><div class="sc-ea1124bc-2 gXcukw"><div color="black" class="sc-feeb4a4b-1 sc-ea1124bc-1 kGugmD gsUfu">Check our social media networks</div></div><div class="sc-cf7b746d-2 sc-ea1124bc-4 ijYmbk kBMaZX"><div class="sc-ea1124bc-3 ewFhqU"><a href="mailto:contact@hackupc.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://twitter.com/hackupc" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="x-twitter" class="svg-inline--fa fa-x-twitter fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://www.instagram.com/hackupc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://www.facebook.com/hackupc" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://linkedin.com/company/hack-upc" target="_blank" rel="noopener noreferrer" aria-label="Email"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" class="svg-inline--fa fa-youtube fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://www.twitch.tv/hackersupc" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitch" class="svg-inline--fa fa-twitch fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M391.17,103.47H352.54v109.7h38.63ZM285,103H246.37V212.75H285ZM120.83,0,24.31,91.42V420.58H140.14V512l96.53-91.42h77.25L487.69,256V0ZM449.07,237.75l-77.22,73.12H294.61l-67.6,64v-64H140.14V36.58H449.07Z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://medium.com/@hackupc" target="_blank" rel="noopener noreferrer" aria-label="Medium"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="medium" class="svg-inline--fa fa-medium fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"></path></svg></a></div><div class="sc-ea1124bc-3 ewFhqU"><a href="https://github.com/hackupc" target="_blank" rel="noopener noreferrer" aria-label="Github"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-3x sc-ea1124bc-6 kWkLYN" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></div></div></div></div><div id="sponsors" class="sc-cf7b746d-1 enfhEk"><div class="sc-cf7b746d-2 sc-1cf30259-0 ijYmbk iVdIfN"><div class="sc-1cf30259-1 itjFAa"><div class="sc-feeb4a4b-0 sc-1cf30259-2 hErPPE jEVzcf __className_c1a059">SPONSORS</div><div class="sc-1cf30259-3 jGHEsI"><div class="sc-1cf30259-5 cysnQS"><div class="sc-ccad176d-0 dWJaHa"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div></div><div class="sc-1cf30259-5 cysnQS"><div class="sc-ccad176d-0 ksntZi"><a href="https://www.bendingspoons.com/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Sponsors/bending_spoons.svg" alt="bendingspoons" class="sc-ccad176d-3 dIiCPv"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 ksntZi"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div></div><div class="sc-1cf30259-5 cysnQS"><div class="sc-ccad176d-0 tdSYJ"><a href="https://www.jetbrains.com/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Sponsors/jetbrains.svg" alt="jetbrains" class="sc-ccad176d-3 dIiCPv"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 tdSYJ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div><div class="sc-ccad176d-0 tdSYJ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div><div class="sc-ccad176d-0 tdSYJ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div></div><div class="sc-1cf30259-5 cysnQS"><div class="sc-ccad176d-0 dKipAt"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div></div></div><div class="sc-feeb4a4b-0 sc-1cf30259-2 hErPPE jEVzcf __className_c1a059">PARTNERS</div><div class="sc-1cf30259-4 cjiepL"><div class="sc-1cf30259-5 cysnQS"><div class="sc-ccad176d-0 cxEzvZ"><a href="https://www.upc.edu/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Partners/upc.svg" alt="upc" class="sc-ccad176d-3 dIiCPv"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 cxEzvZ"><a href="https://www.fib.upc.edu/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Partners/fib.svg" alt="fib" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 cxEzvZ"><a href="https://telecos.upc.edu/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Partners/telecos.png" alt="telecos" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 cxEzvZ"><a href="https://cfis.upc.edu/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Partners/cfis.svg" alt="CFIS" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 cxEzvZ"><a href="https://mlh.io/eu" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Partners/mlh.svg" alt="mlh" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 cxEzvZ"><a href="https://enginyeriainformatica.cat/dones-coeinf/" target="_blank" rel="noopener noreferrer" class="sc-ccad176d-1 cNCIgh"><img src="/Partners/coeinf.png" alt="coeinf" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Go to website</div></a></div><div class="sc-ccad176d-0 cxEzvZ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div></div><div class="sc-1cf30259-5 cysnQS"><div class="sc-ccad176d-0 cxEzvZ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div><div class="sc-ccad176d-0 cxEzvZ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div><div class="sc-ccad176d-0 cxEzvZ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div><div class="sc-ccad176d-0 cxEzvZ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div><div class="sc-ccad176d-0 cxEzvZ"><div class="sc-ccad176d-2 bxgVA"><img src="/hackupcLogoWhite.svg" alt="Top Secret" class="sc-ccad176d-3 hLnxyM"><div class="sc-feeb4a4b-5 sc-ccad176d-4 dQQvzF fgDMCB">Top Secret</div></div></div></div></div></div></div></div><div id="hackers" class="sc-cf7b746d-1 enfhEk"><div class="sc-8aedebd8-0 crpAKO"><div class="sc-feeb4a4b-0 hErPPE __className_c1a059">The organization behind HackUPC</div><div class="sc-feeb4a4b-2 sc-8aedebd8-5 dOired cBYmrR">Hackers@UPC is a non-profit student organization at Universitat Politècnica de Catalunya.</div><div class="sc-8aedebd8-3 iHDuJM"><img alt="Logotype of HackersAtUPC" loading="lazy" width="80" height="80" decoding="async" data-nimg="1" class="sc-8aedebd8-2 hIVImy" style="color:transparent" src="/hackersatupc.svg"><div class="sc-8aedebd8-4 cCRvRv"><div class="sc-feeb4a4b-3 gKkxHZ">Throughout the year, we organize national and international events in order to promote science and technology among students and create a great community in the technological world. We also attend hackathons worldwide as a team.</div><div class="sc-feeb4a4b-3 gKkxHZ">Our mission is to foster learning, designing, and building to turn students' ideas into a reality!</div></div></div><a href="https://hackersatupc.org" target="_blank" rel="noreferrer" class="sc-8aedebd8-1 jMiRzV __className_c1a059">Go to website</a></div></div><div class="sc-cf7b746d-1 sc-cacd98c-1 enfhEk jwKnTz"><div class="sc-feeb4a4b-0 sc-cacd98c-0 hErPPE dDzjsO __className_c1a059">THROUGHOUT<!-- --> <span class="break"><br></span>THE YEARS</div><div class="sc-cacd98c-5 bNphiU"><img alt="Sword Image" loading="lazy" width="144" height="366" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/sword.svg"></div><div class="sc-cacd98c-4 dRuWfN"></div><div class="sc-78e8897d-0 jnUfYg"><button class="sc-78e8897d-4 sc-78e8897d-6 irjpVe cxwHsS embla__prev"><img alt="Previous" loading="lazy" width="100" height="75" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/LeftArrow.svg"></button><div class="sc-78e8897d-1 iSrfcY"><div class="sc-78e8897d-2 HuXyY" style="transform: translate3d(0px, 0px, 0px);"><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://s2016.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2016s.svg"></a></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://f2016.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2016f.svg"></a></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://f2017.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2017f.svg"></a></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://w2017.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2017w.svg"></a></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://2018.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2018.svg"></a></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://2019.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2019.svg"></a></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><div><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2020.svg"></div></div><div class="sc-78e8897d-3 cmtPuY" style="transform: translate3d(0px, 0px, 0px);"><a target="_blank" href="https://2021.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2021.svg"></a></div><div class="sc-78e8897d-3 cmtPuY"><a target="_blank" href="https://2022.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2022.svg"></a></div><div class="sc-78e8897d-3 cmtPuY"><a target="_blank" href="https://2023.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2023.svg"></a></div><div class="sc-78e8897d-3 cmtPuY"><a target="_blank" href="https://2024.hackupc.com/"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2024.svg"></a></div><div class="sc-78e8897d-3 cmtPuY"><a target="_blank" href="https://2025.hackupc.com"><img alt="altText" loading="lazy" width="150" height="150" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/2025.svg"></a></div></div></div><button class="sc-78e8897d-4 sc-78e8897d-5 irjpVe bfcKLd embla__next"><img alt="Next" loading="lazy" width="100" height="75" decoding="async" data-nimg="1" style="color:transparent" src="/ThroughTheYears/RightArrow.svg"></button></div></div><div class="sc-947edbcb-0 hDJyXN"><div class="sc-cf7b746d-1 enfhEk"><a href="https://2025.hackupc.com/" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">2025 site</a><div class="sc-947edbcb-1 cJlAck"><div class="sc-947edbcb-3 jxxmSy"><a href="mailto:contact@hackupc.com" rel="noopener noreferrer" aria-label="Email"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></svg></a><a href="https://twitter.com/hackupc" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="x-twitter" class="svg-inline--fa fa-x-twitter fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg></a><a href="https://www.instagram.com/hackupc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a><a href="https://www.facebook.com/hackupc" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path></svg></a><a href="https://linkedin.com/company/hack-upc" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a><a href="https://www.youtube.com/channel/UCiiRorGg59Xd5Sjj9bjIt-g" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" class="svg-inline--fa fa-youtube fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a><a href="https://www.twitch.tv/hackersupc" target="_blank" rel="noopener noreferrer" aria-label="Youtube"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitch" class="svg-inline--fa fa-twitch fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M391.17,103.47H352.54v109.7h38.63ZM285,103H246.37V212.75H285ZM120.83,0,24.31,91.42V420.58H140.14V512l96.53-91.42h77.25L487.69,256V0ZM449.07,237.75l-77.22,73.12H294.61l-67.6,64v-64H140.14V36.58H449.07Z"></path></svg></a><a href="https://medium.com/@hackupc" target="_blank" rel="noopener noreferrer" aria-label="Medium"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="medium" class="svg-inline--fa fa-medium fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"></path></svg></a><a href="https://github.com/hackupc" target="_blank" rel="noopener noreferrer" aria-label="Github"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a></div><div class="sc-feeb4a4b-3 gKkxHZ"><a href="https://hacknights.hackersatupc.org/" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">HackNights</a> <!-- -->|<!-- --> <a href="https://hackersatupc.org/" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">Hackers@UPC</a></div></div><div style="text-align:center" class="sc-feeb4a4b-3 gKkxHZ"><a href="https://legal.hackersatupc.org/hackupc/terms_and_conditions" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">Terms and conditions</a> <!-- -->|<!-- --> <a href="https://legal.hackersatupc.org/hackupc/legal_notice" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">Legal notice</a> <!-- -->|<!-- --> <a href="https://legal.hackersatupc.org/hackupc/privacy_and_cookies" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">Privacy and cookies</a></div><div style="margin-top:8px" class="sc-feeb4a4b-3 gKkxHZ">Made with ❤️ by<!-- --> <a href="https://hackersatupc.org/" target="_blank" rel="noreferrer" class="sc-feeb4a4b-4 sc-947edbcb-2 dtHcTF flPDDO">Hackers@UPC</a></div></div></div></main><script src="/_next/static/chunks/webpack-fe256a069f5b39e8.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"1:HL[\"/_next/static/media/5c0c2bcbaa4149ca-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n2:HL[\"/_next/static/media/904be59b21bd51cb-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n3:HL[\"/_next/static/css/a3d2f16f30da9e60.css\",\"style\"]\n4:HL[\"/_next/static/css/33d6722493706b1c.css\",\"style\"]\n5:HL[\"/_next/static/css/c2cec86bb0998565.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"6:I[2846,[],\"\"]\n8:I[9107,[],\"ClientPageRoot\"]\n9:I[2790,[\"676\",\"static/chunks/870fdd6f-e317f94c497f374a.js\",\"958\",\"static/chunks/69b09407-12a8fce1f9baf50a.js\",\"528\",\"static/chunks/528-26944035b6fb8900.js\",\"886\",\"static/chunks/886-4b2f54563800f788.js\",\"931\",\"static/chunks/app/page-67debbae62488b6b.js\"],\"default\",1]\na:I[7639,[\"528\",\"static/chunks/528-26944035b6fb8900.js\",\"185\",\"static/chunks/app/layout-f60490ec120b2951.js\"],\"default\"]\nb:I[8003,[\"528\",\"static/chunks/528-26944035b6fb8900.js\",\"185\",\"static/chunks/app/layout-f60490ec120b2951.js\"],\"\"]\nc:I[4707,[],\"\"]\nd:I[6423,[],\"\"]\ne:I[5292,[\"528\",\"static/chunks/528-26944035b6fb8900.js\",\"160\",\"static/chunks/app/not-found-1ad5ccb5d0d2b11c.js\"],\"default\"]\n10:I[4888,[\"528\",\"static/chunks/528-26944035b6fb8900.js\",\"185\",\"static/chunks/app/layout-f60490ec120b2951.js\"],\"GoogleAnalytics\"]\n12:I[1060,[],\"\"]\nf:T6a8,{\"@context\":\"https://schema.org/\",\"@type\":\"EducationEvent\",\"name\":\"HackUPC 2024\",\"alternateName\":\"Hack UPC\",\"about\":[\"Hackathon\",\"Hacker\",\"Student\",\"University\",\"Collage\",\"Programming\",\"Coding\",\"Developers\",\"Technology\",\"UPC\",\"Barcelona\",\"Spain\"],\"description\":\"HackUPC is the first student hackathon in Spain. This will be our tenth edition, apart from coding we also have lots of side activities to learn new technologies, meet interesting people and have fun. Come make history with us!\",\"startDate\":\"2024-05-03\",\"endDate\":\"2024-05-05\",\"eventStatus\":\"EventScheduled\",\"url\":\"https://hackupc.com/\",\"eventAttendanceMode\":\"OfflineEventAttendanceMode \",\"location\":{\"@type\":\"Place\",\"name\":\"UPC's North Campus FIB\",\"address\":{\"streetAddress\":\"Edifici B6 del Campus Nord, C/Jordi Girona, 1-3\",\"addressLocality\":\"Barcelona\",\"postalCode\":\"08034\",\"addressRegion\":\"Barcelona\"}},\"potentialAction\":{\"@type\":\"RegisterAction\",\"target\":\"https://my.hackupc.com/\"},\"image\":\"https://hackupc.com/og_image2026.png\",\"maximumAttendeeCapacity\":500,\"isAccessibleForFree\":true,\"offers\":{\"@type\":\"Offer\",\"price\":\"0.00\",\"priceCurrency\":\"EUR\",\"url\":\"https://my.hackupc.com/\",\"validFrom\":\"2024-05-03\",\"validThrough\":"])</script><script>self.__next_f.push([1,"\"2024-05-05\",\"availability\":\"InStock\"},\"typicalAgeRange\":\"14-30\",\"inLanguage\":\"en\",\"organizer\":{\"@type\":\"Organization\",\"url\":\"https://hackersatupc.org/\",\"name\":\"Hackers@UPC\",\"email\":\"contact@hackupc.com\"},\"performer\":{\"@type\":\"Organization\",\"url\":\"https://hackersatupc.org/\",\"name\":\"Hackers@UPC\",\"email\":\"support@hackersatupc.org\"},\"mainEntityOfPage\":\"https://hackupc.com/\",\"sponsor\":[{\"@type\":\"Organization\",\"name\":\"FIB\",\"url\":\"https://fib.upc.com/\"},{\"@type\":\"Organization\",\"name\":\"UPC\",\"url\":\"https://upc.edu/\"}]}13:[]\n"])</script><script>self.__next_f.push([1,"0:[\"$\",\"$L6\",null,{\"buildId\":\"tQgIqwn4hXWvcecLxtmNL\",\"assetPrefix\":\"\",\"urlParts\":[\"\",\"\"],\"initialTree\":[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],\"initialSeedData\":[\"\",{\"children\":[\"__PAGE__\",{},[[\"$L7\",[\"$\",\"$L8\",null,{\"props\":{\"params\":{},\"searchParams\":{}},\"Component\":\"$9\"}],null],null],null]},[[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/a3d2f16f30da9e60.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"link\",\"1\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/33d6722493706b1c.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}],[\"$\",\"link\",\"2\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/c2cec86bb0998565.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[[\"$\",\"$La\",null,{\"children\":[\"$\",\"body\",null,{\"className\":\"__className_069ab3\",\"children\":[[\"$\",\"a\",null,{\"id\":\"mlh-trust-badge\",\"style\":{\"display\":\"block\",\"maxWidth\":100,\"minWidth\":60,\"position\":\"fixed\",\"right\":50,\"top\":0,\"width\":\"10%\",\"zIndex\":10000},\"href\":\"https://mlh.io/eu?utm_source=eu-hackathon\u0026utm_medium=TrustBadge\u0026utm_campaign=2026-season\u0026utm_content=red\",\"target\":\"_blank\",\"rel\":\"noreferrer\",\"children\":[\"$\",\"img\",null,{\"src\":\"https://s3.amazonaws.com/logged-assets/trust-badge/2026/mlh-trust-badge-2026-red.svg\",\"alt\":\"Major League Hacking 2026 Hackathon Season\",\"style\":{\"width\":\"100%\",\"filter\":\"brightness(0.85) saturate(0.7)\"}}]}],[\"$\",\"$Lb\",null,{\"id\":\"cookieyes\",\"type\":\"text/javascript\",\"src\":\"https://cdn-cookieyes.com/client_data/f0da360b52ebfbe361cbc559/script.js\"}],[\"$\",\"$Lc\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$Ld\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[\"$\",\"$Le\",null,{}],\"notFoundStyles\":[]}],[\"$\",\"$Lb\",null,{\"id\":\"microsoft-clarity-init\",\"strategy\":\"afterInteractive\",\"dangerouslySetInnerHTML\":{\"__html\":\"\\n            (function (c, l, a, r, i, t, y){\\n              c[a] = c[a] || function () {\\n                (c[a].q = c[a].q || []).push(arguments)\\n              };\\n              t=l.createElement(r);t.async=1;t.src=\\\"https://www.clarity.ms/tag/\\\"+i;\\n              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);\\n            })\\n            (window, document, \\\"clarity\\\", \\\"script\\\", \\\"kzqhp8jv6l\\\");\"}}],[\"$\",\"$Lb\",null,{\"id\":\"structured-data\",\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"$f\"}}],[\"$\",\"$L10\",null,{\"gaId\":\"G-WFBH19BZ64\"}]]}]}],[\"$\",\"$Lb\",null,{\"async\":true,\"src\":\"https://easter-egg.hackupc.com/index.js\"}]]}]],null],null],\"couldBeIntercepted\":false,\"initialHead\":[null,\"$L11\"],\"globalErrorComponent\":\"$12\",\"missingSlots\":\"$W13\"}]\n"])</script><script>self.__next_f.push([1,"11:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"2\",{\"children\":\"HackUPC 2026 | April 24-26 | Student hackathon in Barcelona\"}],[\"$\",\"meta\",\"3\",{\"name\":\"description\",\"content\":\"Student hackathon in Barcelona on April 24-26 for 36 hours\"}],[\"$\",\"link\",\"4\",{\"rel\":\"author\",\"href\":\"https://hackersatupc.org/\"}],[\"$\",\"meta\",\"5\",{\"name\":\"author\",\"content\":\"Hackers@UPC\"}],[\"$\",\"meta\",\"6\",{\"name\":\"keywords\",\"content\":\"Hackathon, Hacker, Student, University, College, Programming, Technology, UPC, Barcelona, Spain\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:title\",\"content\":\"HackUPC 2026 | April 24-26 | Student hackathon Barcelona\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:description\",\"content\":\"36 hours student hackathon in Barcelona in April starting on the 24th ending the 26th\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:url\",\"content\":\"https://hackupc.com\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:site_name\",\"content\":\"HackUPC\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:locale\",\"content\":\"en_GB\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:image\",\"content\":\"https://hackupc.com/og_image2026.png\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:image:secure_url\",\"content\":\"https://hackupc.com/og_image2026.png\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:image:alt\",\"content\":\"HackUPC landing page screenshot\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"16\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:site\",\"content\":\"@hackupc\"}],[\"$\",\"meta\",\"18\",{\"name\":\"twitter:creator\",\"content\":\"@hackupc\"}],[\"$\",\"meta\",\"19\",{\"name\":\"twitter:title\",\"content\":\"HackUPC 2026 | April 24-26 | Student hackathon Barcelona\"}],[\"$\",\"meta\",\"20\",{\"name\":\"twitter:description\",\"content\":\"36 hours student hackathon in Barcelona in April starting on the 24th ending the 26th\"}],[\"$\",\"meta\",\"21\",{\"name\":\"twitter:image\",\"content\":\"https://hackupc.com/og_image2026.png\"}],[\"$\",\"meta\",\"22\",{\"name\":\"twitter:image:secure_url\",\"content\":\"https://hackupc.com/og_image2026.png\"}],[\"$\",\"meta\",\"23\",{\"name\":\"twitter:image:alt\",\"content\":\"HackUPC 2026 | April 24-26 | Student hackathon in Barcelona\"}],[\"$\",\"link\",\"24\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"48x48\"}],[\"$\",\"meta\",\"25\",{\"name\":\"next-size-adjust\"}]]\n"])</script><script>self.__next_f.push([1,"7:null\n"])</script><script src="https://cdn-cookieyes.com/client_data/f0da360b52ebfbe361cbc559/script.js" id="cookieyes" type="text/javascript" data-nscript="afterInteractive"></script><script id="microsoft-clarity-init" data-nscript="afterInteractive">
+            (function (c, l, a, r, i, t, y){
+              c[a] = c[a] || function () {
+                (c[a].q = c[a].q || []).push(arguments)
+              };
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })
+            (window, document, "clarity", "script", "kzqhp8jv6l");</script><script id="structured-data" type="application/ld+json" data-nscript="afterInteractive">{"@context":"https://schema.org/","@type":"EducationEvent","name":"HackUPC 2024","alternateName":"Hack UPC","about":["Hackathon","Hacker","Student","University","Collage","Programming","Coding","Developers","Technology","UPC","Barcelona","Spain"],"description":"HackUPC is the first student hackathon in Spain. This will be our tenth edition, apart from coding we also have lots of side activities to learn new technologies, meet interesting people and have fun. Come make history with us!","startDate":"2024-05-03","endDate":"2024-05-05","eventStatus":"EventScheduled","url":"https://hackupc.com/","eventAttendanceMode":"OfflineEventAttendanceMode ","location":{"@type":"Place","name":"UPC's North Campus FIB","address":{"streetAddress":"Edifici B6 del Campus Nord, C/Jordi Girona, 1-3","addressLocality":"Barcelona","postalCode":"08034","addressRegion":"Barcelona"}},"potentialAction":{"@type":"RegisterAction","target":"https://my.hackupc.com/"},"image":"https://hackupc.com/og_image2026.png","maximumAttendeeCapacity":500,"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0.00","priceCurrency":"EUR","url":"https://my.hackupc.com/","validFrom":"2024-05-03","validThrough":"2024-05-05","availability":"InStock"},"typicalAgeRange":"14-30","inLanguage":"en","organizer":{"@type":"Organization","url":"https://hackersatupc.org/","name":"Hackers@UPC","email":"contact@hackupc.com"},"performer":{"@type":"Organization","url":"https://hackersatupc.org/","name":"Hackers@UPC","email":"support@hackersatupc.org"},"mainEntityOfPage":"https://hackupc.com/","sponsor":[{"@type":"Organization","name":"FIB","url":"https://fib.upc.com/"},{"@type":"Organization","name":"UPC","url":"https://upc.edu/"}]}</script><script id="_next-ga-init" data-nscript="afterInteractive">
+          window['dataLayer'] = window['dataLayer'] || [];
+          function gtag(){window['dataLayer'].push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-WFBH19BZ64');</script><script src="https://www.googletagmanager.com/gtag/js?id=G-WFBH19BZ64" id="_next-ga" data-nscript="afterInteractive"></script><next-route-announcer style="position: absolute;"></next-route-announcer><wtf-is-this></wtf-is-this></body></html>
