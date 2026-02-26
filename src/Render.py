@@ -2,24 +2,6 @@
 from playwright.sync_api import sync_playwright
 
 
-"""def screenshot_chart(url: str, out_path: str, selector: str = "canvas, svg"):
-    # es podria fer un bucle que provi diferents formats de selector fins que trobi un que funcioni ( i no doni timeout error))
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page(viewport={"width": 1440, "height": 900})
-        
-        page.goto(url, wait_until= "domcontentloaded")
-        page.wait_for_load_state("networkidle")
-        page.wait_for_timeout(3000)  
-        page.wait_for_selector(selector, state="visible", timeout=60000)
-
-        element = page.locator(selector).first
-        
-        element.scroll_into_view_if_needed()
-        element.screenshot(path=out_path, animations="disabled")
-
-        browser.close()"""
-
 def screenshot_chart(url: str, out_path: str):
     # "Chart detection based on visual prominence heuristics (largest SVG element in DOM)."
     with sync_playwright() as p:
@@ -71,21 +53,6 @@ def debug_page(url: str):
         browser.close()
 
 
-
-"""¿Y si no sabes el selector?
-
-Haz primero un screenshot de la página completa para inspeccionar:
-
-page.screenshot(path="fullpage.png", full_page=True)
-
-
-Luego abres fullpage.png y decides qué selector usar (o miras el DOM con DevTools)."""
-
-"""Te recomiendo guardar también:
-
-html = page.content()
-with open("page.html", "w", encoding="utf-8") as f:
-    f.write(html)"""
 
 # Example usage
 if __name__ == "__main__":

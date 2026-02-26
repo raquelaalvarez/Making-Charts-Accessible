@@ -1,0 +1,1542 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+
+	<!-- Search engines -->
+	<meta name="description" content="Visualize election results with Flourish. Discover 16 ways to transform election coverage and get inspiration from the European parliament and US elections.">
+
+	
+	<link rel="canonical" href="https://flourish.studio/blog/report-on-elections-with-flourish/">
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@f_l_o_u_r_i_s_h">
+	<meta name="twitter:image" content="https://flourish.studio/images/blog/15-ways-elections-meta.png">
+	<meta name="twitter:title" content="16 ways to visualize US elections data">
+	<meta name="twitter:description" content="Visualize election results with Flourish. Discover 16 ways to transform election coverage and get inspiration from the European parliament and US elections.">
+	<meta name="twitter:creator" content="@f_l_o_u_r_i_s_h">
+
+	<meta property="og:title" content="16 ways to visualize US elections data">
+	<meta property="og:image" content="https://flourish.studio/images/blog/15-ways-elections-meta.png">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Visualize election results with Flourish. Discover 16 ways to transform election coverage and get inspiration from the European parliament and US elections.">
+	<meta property="og:site_name" content="Flourish">
+	<meta property="og:url" content="https://flourish.studio/blog/report-on-elections-with-flourish/">
+	<meta property="fb:app_id" content="102649676918117">
+
+	<title>16 ways to visualize US elections data | Flourish</title>
+
+	
+
+
+
+
+
+  <script async="" src="/js/9e10734c6f18ce57.js"></script><script async="" type="text/plain" src="https://www.googletagmanager.com/gtm.js?id=GTM-PBJJP4J" class="optanon-category-C0002 "></script><script async="" type="text/plain" src="https://www.google-analytics.com/analytics.js" class="optanon-category-C0002-C0004 "></script><script type="text/javascript">
+    // Create a global state object to track OneTrust status
+    window.flourishOneTrust = window.flourishOneTrust || { ready: false };
+
+    // Store original OptanonWrapper if it exists
+    var _otOriginalWrapper = window.OptanonWrapper;
+
+    function newOptanonWrapper() {
+      // Call original wrapper if it exists (useful for plugins)
+      if (typeof _otOriginalWrapper === 'function') {
+        _otOriginalWrapper();
+      }
+
+      // Set flag and dispatch event for OneTrust loaded - do this immediately
+      window.flourishOneTrust.ready = true;
+      const oneTrustLoadedEvent = new CustomEvent('onetrustloaded');
+      window.dispatchEvent(oneTrustLoadedEvent);
+
+      // Set up consent change listener once, with a safety check
+      try {
+        if (window.OneTrust && typeof window.OneTrust.OnConsentChanged === 'function') {
+          window.OneTrust.OnConsentChanged(function() {
+            // Set flag and dispatch event for consent change
+            window.flourishOneTrust.ready = true;
+            const oneTrustConsentChangedEvent = new CustomEvent('onetrustconsentchanged');
+            window.dispatchEvent(oneTrustConsentChangedEvent);
+          });
+        }
+      } catch (e) {
+        console.error('Error setting up OneTrust consent changed listener:', e);
+      }
+    }
+
+    // Set OptanonWrapper to our new function
+    window.OptanonWrapper = newOptanonWrapper;
+  </script>
+  <script src="https://cdn-au.onetrust.com/consent/c7f22011-a5da-4a30-8750-4cb18703c00d/OtAutoBlock.js" type="text/javascript"></script>
+  <script src="https://cdn-au.onetrust.com/consent/c7f22011-a5da-4a30-8750-4cb18703c00d/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="c7f22011-a5da-4a30-8750-4cb18703c00d"></script>
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-44635456-19', 'auto');
+    ga('send', 'pageview');
+
+    function createFunctionWithTimeout(callback, timeout) {
+        var called = false;
+        function fn() {
+            if (!called) {
+                called = true;
+                callback();
+            }
+        }
+        setTimeout(fn, timeout || 1000); // default is 1000ms
+        return fn;
+    }
+
+    var trackOutboundLink = function(url) {
+        ga('send', 'event', 'outbound', 'click', url, {
+            'transport': 'beacon',
+            'hitCallback': createFunctionWithTimeout(function() {
+                document.location = url;
+            })
+        });
+    };
+
+    var trackEmailClick = function(address_type) {
+        ga('send', 'event', {
+            eventCategory: 'click',
+            eventAction: 'email',
+            eventLabel: address_type
+        });
+    };
+
+    var trackFormSubmit = function(label, method, path, params) {
+        ga('send', 'event', {
+            eventCategory: 'outbound',
+            eventAction: 'click',
+            eventLabel: label,
+            hitCallback: createFunctionWithTimeout(function() {
+                params = params || {};
+                var form = document.createElement('form');
+                form.setAttribute('method', method);
+                form.setAttribute('action', path);
+                for (var key in params) {
+                    if (params.hasOwnProperty(key)) {
+                        var hiddenField = document.createElement('input');
+                        hiddenField.setAttribute('type', 'hidden');
+                        hiddenField.setAttribute('name', key);
+                        hiddenField.setAttribute('value', params[key]);
+                        form.appendChild(hiddenField);
+                    }
+                }
+                document.body.appendChild(form);
+                form.submit();
+            })
+        });
+    };
+</script>
+
+
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-MLMV2BQ" class="optanon-category-C0002 " type="text/plain"></script>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PBJJP4J');</script>
+
+
+    <script type="text/javascript">
+		(function () {
+			window.snowplowEventQueue = [];
+			window.gaEventQueue = [];
+
+			let is_initialising = false;
+			let analytics_has_initialized = false;
+
+			window._originalGtag = window.gtag;
+
+			window.gtag = function(...args) {
+				window.gaEventQueue.push({
+					type: 'gtag',
+					args: args,
+					timestamp: new Date().toISOString()
+				});
+
+				if (typeof window._originalGtag === 'function') {
+					window._originalGtag.apply(window, args);
+				}
+			};
+
+			window.dataLayer = window.dataLayer || [];
+			const originalDataLayerPush = Array.prototype.push;
+
+			window.dataLayer.push = function(...args) {
+				args.forEach(arg => {
+					window.gaEventQueue.push({
+						type: 'dataLayer',
+						data: arg,
+						timestamp: new Date().toISOString()
+					});
+				});
+
+				return originalDataLayerPush.apply(window.dataLayer, args);
+			};
+
+			window.sp = {
+				trackInteraction: function (properties) {
+					window.snowplowEventQueue.push({
+						type: 'interaction',
+						properties: properties,
+						timestamp: new Date().toISOString()
+					});
+				},
+				trackFormInteraction: function (properties) {
+					window.snowplowEventQueue.push({
+						type: 'formInteraction',
+						properties: properties,
+						timestamp: new Date().toISOString()
+					});
+				}
+			};
+
+			const queue_function_impl = {
+				trackInteraction: window.sp.trackInteraction,
+				trackFormInteraction: window.sp.trackFormInteraction
+			};
+
+			function debounce(func, wait) {
+				let timeout;
+				return function() {
+					const context = this;
+					const args = arguments;
+					const later = function() {
+						timeout = null;
+						func.apply(context, args);
+					};
+					clearTimeout(timeout);
+					timeout = setTimeout(later, wait);
+				};
+			}
+
+			function processQueuedEvents() {
+				const trackGAEvent = function (properties) {
+					const eventData = {
+						category: "ga4_event",
+						action: properties.action || properties.event || 'unknown'
+					};
+
+					window.snowplow('trackSelfDescribingEvent', {
+						event: {
+							schema: 'iglu:com.snowplowanalytics.snowplow/unstruct_event/jsonschema/1-0-0',
+							data: {
+								schema: 'iglu:com.google.analytics.measurement-protocol/event/jsonschema/1-0-0',
+								data: eventData
+							}
+						},
+						context: [{
+							schema: 'iglu:com.google.analytics.measurement-protocol/hit/jsonschema/1-0-0',
+							data: {type: "event"}
+						}]
+					});
+				};
+
+				if (window.snowplowEventQueue && window.snowplowEventQueue.length > 0) {
+					window.snowplowEventQueue.forEach(event => {
+						if (event.type === 'interaction') {
+							window.sp.trackInteraction(event.properties);
+						} else if (event.type === 'formInteraction') {
+							window.sp.trackFormInteraction(event.properties);
+						}
+					});
+					window.snowplowEventQueue = [];
+				}
+
+				if (window.gaEventQueue && window.gaEventQueue.length > 0) {
+					window.gaEventQueue.forEach(event => {
+						if (event.type === 'dataLayer') {
+							const data = event.data;
+
+							if (Array.isArray(data) && data[0] === "event") {
+								const [_, eventName, eventParams] = data;
+								trackGAEvent({
+									...eventParams,
+									category: "ga4_event",
+									action: eventName,
+								});
+							} else if (typeof data === "object" && data !== null && "event" in data) {
+								const {event, ...params} = data;
+								trackGAEvent({
+									...params,
+									category: "ga4_event",
+									action: event,
+								});
+							}
+						} else if (event.type === 'gtag') {
+							const args = event.args;
+							const [command, action, parameters] = args;
+
+							if (command === "event" && action && parameters) {
+								trackGAEvent({
+									...parameters,
+									category: "ga4_event",
+									action,
+								});
+							}
+						}
+					});
+					window.gaEventQueue = [];
+				}
+			}
+
+			const initialiseSnowplow = debounce(function() {
+				const hasConsent = checkOneTrustConsent();
+
+				if (is_initialising) {
+					return;
+				}
+
+				if (analytics_has_initialized && window.snowplowInitialized) {
+					return;
+				}
+
+				is_initialising = true;
+
+				if (analytics_has_initialized && (!window.snowplowEventQueue || !Array.isArray(window.snowplowEventQueue))) {
+					window.snowplowEventQueue = [];
+					window.sp.trackInteraction = queue_function_impl.trackInteraction;
+					window.sp.trackFormInteraction = queue_function_impl.trackFormInteraction;
+				}
+
+				try {
+					;(function (p, l, o, w, i, n, g) {
+						if (!p[i]) {
+							p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+							p.GlobalSnowplowNamespace.push(i);
+							p[i] = function () {
+								(p[i].q = p[i].q || []).push(arguments)
+							};
+							p[i].q = p[i].q || [];
+							n = l.createElement(o);
+							g = l.getElementsByTagName(o)[0];
+							n.async = 1;
+							n.src = w;
+							g.parentNode.insertBefore(n, g)
+						}
+					}(window, document, "script", "/js/9e10734c6f18ce57.js", "snowplow"));
+
+					const trackerConfig = {
+						appId: 'flourish',
+						platform: 'web',
+						cookieDomain: 'flourish.studio',
+						contexts: {
+							webPage: true,
+							session: true,
+							browser: true,
+						},
+						stateStorageStrategy: 'cookieAndLocalStorage',
+						referrerPolicy: 'no-referrer-when-downgrade',
+						credentials: 'omit',
+						eventMethod: 'post',
+						crossDomainLinker: function (linkElement) {
+							const flourishDomains = [
+								
+									
+										'app.flourish.studio',
+									
+										'public.flourish.studio'
+									
+								
+							];
+							return linkElement.hostname !== location.hostname &&
+								   flourishDomains.includes(linkElement.hostname);
+						}
+					};
+
+					if (!hasConsent) {
+						trackerConfig.anonymousTracking = { withSessionTracking: true };
+					}
+
+					window.snowplow('newTracker', 'marketing_site', 'https://api.canva.com/_spi/ae/snowplow/5f60f4dc-c844-41b5-9da7-ab8d39e5f475', trackerConfig);
+
+					window.snowplow('addPlugin',
+						"https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-client-hints@latest/dist/index.umd.min.js",
+						["snowplowClientHints", "ClientHintsPlugin"]
+					);
+
+					window.snowplow('addPlugin',
+						"https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-ga-cookies@latest/dist/index.umd.min.js",
+						["snowplowGaCookies", "GaCookiesPlugin"],
+						[{
+							ga4: true,
+							ua: false,
+							ga4MeasurementId: "G-KW52XHYN9H"
+						}]
+					);
+
+					window.sp = {
+						trackInteraction: function (properties) {
+							window.snowplow('trackSelfDescribingEvent', {
+								event: {
+									schema: 'iglu:studio.flourish/flourish_interacted/jsonschema/1-0-0',
+									data: properties
+								}
+							});
+						},
+
+						trackFormInteraction: function (properties) {
+							window.snowplow('trackSelfDescribingEvent', {
+								event: {
+									schema: 'iglu:studio.flourish/flourish_form_interacted/jsonschema/1-0-0',
+									data: properties
+								}
+							});
+						},
+					};
+
+					window.snowplowInitialized = true;
+					analytics_has_initialized = true;
+
+					window.snowplow('trackPageView');
+
+					processQueuedEvents();
+
+					const trackGAEvent = function (properties) {
+						const eventData = {
+							category: "ga4_event",
+							action: properties.action || properties.event || 'unknown'
+						};
+
+						window.snowplow('trackSelfDescribingEvent', {
+							event: {
+								schema: 'iglu:com.snowplowanalytics.snowplow/unstruct_event/jsonschema/1-0-0',
+								data: {
+									schema: 'iglu:com.google.analytics.measurement-protocol/event/jsonschema/1-0-0',
+									data: eventData
+								}
+							},
+							context: [{
+								schema: 'iglu:com.google.analytics.measurement-protocol/hit/jsonschema/1-0-0',
+								data: {type: "event"}
+							}]
+						});
+					};
+
+					window.dataLayer.push = function(...args) {
+						args.forEach(arg => {
+							if (Array.isArray(arg) && arg[0] === "event") {
+								const [_, eventName, eventParams] = arg;
+								trackGAEvent({
+									...eventParams,
+									category: "ga4_event",
+									action: eventName,
+								});
+							} else if (typeof arg === "object" && arg !== null && "event" in arg) {
+								const {event, ...params} = arg;
+								trackGAEvent({
+									...params,
+									category: "ga4_event",
+									action: event,
+								});
+							}
+						});
+
+						return originalDataLayerPush.apply(window.dataLayer, args);
+					};
+
+					window.gtag = function(...args) {
+						if (typeof window._originalGtag === 'function') {
+							window._originalGtag.apply(window, args);
+						}
+
+						const [command, action, parameters] = args;
+						if (command === "set" || command === "consent") {
+							return;
+						}
+						if (command === "event") {
+							trackGAEvent({
+								...parameters,
+								category: "ga4_event",
+								action,
+							});
+						}
+					};
+
+					let pageLoadTime = Date.now();
+					let pageScrollDepth = 0;
+					let scrollTimeout;
+					let isUnloading = false;
+
+					function trackClosed(action) {
+						const properties = {
+							seconds_on_page: Math.round((Date.now() - pageLoadTime) / 1000).toString(),
+							page_scroll_depth: pageScrollDepth.toString(),
+							action: action
+						};
+
+						window.snowplow('trackSelfDescribingEvent', {
+							event: {
+								schema: 'iglu:studio.flourish/flourish_closed/jsonschema/1-0-0',
+								data: properties
+							}
+						});
+					}
+
+					function updateScrollDepth() {
+						const html = document.documentElement;
+						const currentScrollDepth = Math.round(
+							(html.scrollTop / (html.scrollHeight - html.clientHeight)) * 100
+						);
+						pageScrollDepth = Math.max(pageScrollDepth, currentScrollDepth);
+					}
+
+					window.addEventListener("scroll", () => {
+						clearTimeout(scrollTimeout);
+						scrollTimeout = setTimeout(updateScrollDepth, 100);
+					});
+
+					window.addEventListener("beforeunload", () => {
+						isUnloading = true;
+						trackClosed("window_close");
+					});
+
+					document.addEventListener("visibilitychange", () => {
+						if (document.visibilityState === "hidden" && !isUnloading) {
+							trackClosed("tab_hidden");
+						} else if (document.visibilityState === "visible") {
+							isUnloading = false;
+							pageLoadTime = Date.now();
+							// window.snowplow('trackPageView');
+						}
+					});
+
+				} catch (error) {
+					console.error('[SnowplowAnalytics] Error:', error);
+				} finally {
+					is_initialising = false;
+				}
+			}, 100);
+
+			function checkOneTrustConsent() {
+				if (false) {
+					return true;
+				}
+
+				if (window.OnetrustActiveGroups && typeof window.OnetrustActiveGroups === "string") {
+					return window.OnetrustActiveGroups.includes('C0002');
+				}
+				return false;
+			}
+
+			let currentConsentState = null;
+
+			function setupAnalyticsListeners() {
+				window.flourishOneTrust = window.flourishOneTrust || { ready: false };
+
+				const handleConsentChange = function() {
+					const hasConsent = checkOneTrustConsent();
+
+					if (!analytics_has_initialized) {
+						currentConsentState = hasConsent;
+						initialiseSnowplow();
+						return;
+					}
+
+					if (currentConsentState !== hasConsent) {
+						currentConsentState = hasConsent;
+
+						try {
+							if (hasConsent) {
+								window.snowplow('disableAnonymousTracking', {
+									stateStorageStrategy: 'cookieAndLocalStorage'
+								});
+								setTimeout(() => {
+									window.snowplow('trackPageView');
+								}, 50);
+							} else {
+								window.snowplow('enableAnonymousTracking', {
+									options: { withSessionTracking: true }
+								});
+							}
+						} catch (error) {
+							console.error('[SnowplowAnalytics] Failed to toggle tracking mode:', error);
+						}
+					}
+				};
+
+				window.addEventListener('onetrustloaded', handleConsentChange);
+				window.addEventListener('onetrustconsentchanged', handleConsentChange);
+				document.addEventListener('OneTrustGroupsUpdated', handleConsentChange);
+			}
+
+			setupAnalyticsListeners();
+
+			if (false) {
+				setTimeout(() => {
+					if (!analytics_has_initialized) {
+						const hasConsent = checkOneTrustConsent();
+						currentConsentState = hasConsent;
+						initialiseSnowplow();
+					}
+				}, 2000); // mocking the time it takes for getting consent in prod
+			} else {
+				const hasConsent = checkOneTrustConsent();
+				currentConsentState = hasConsent;
+				initialiseSnowplow();
+			}
+		})();
+    </script>
+
+
+<!-- Fullstory Integration with Enterprise Controls -->
+<script>
+    (function() {
+        'use strict';
+
+        // ================================
+        // CONFIGURATION
+        // ================================
+        const FULLSTORY_CONFIG = {
+            orgId: 'o-23F4NG-na1',
+            allowedDomain: 'flourish.studio',
+            teamSpace: 'flourish',
+            samplingRate: 0.1,
+            monthlySessionCap: 20000,
+            consentGroupId: 'C0002'
+        };
+        
+        // Pages where Fullstory should be disabled (personal data input, local/staging)
+        const BLOCKED_PATHS = ["/newsletter/","/talk-to-us/","/resources/webinar/","/resources/webinar/john-burn-murdoch-webinar-2025/"];
+        const ALLOWED_PATHS = [];
+
+        // ================================
+        // DOMAIN CHECK
+        // ================================
+        function isDomainAllowed() {
+            return window.location.hostname === FULLSTORY_CONFIG.allowedDomain;
+        }
+        
+        // ================================
+        // PAGE BLOCKING CHECK
+        // ================================
+        function isPageBlocked() {
+            const currentPath = window.location.pathname.toLowerCase();
+            return BLOCKED_PATHS.some(blockedPath => 
+                currentPath.includes(blockedPath)
+            );
+        }
+
+        // For local/staging - check if page is ALLOWED
+        function isPageAllowed() {
+            if (!ALLOWED_PATHS || ALLOWED_PATHS.length === 0) return true; // Production - no allowlist
+    
+            const currentPath = window.location.pathname.toLowerCase();
+            return ALLOWED_PATHS.some(allowedPath => 
+                currentPath.includes(allowedPath.toLowerCase())
+            );
+        }
+        
+        // ================================
+        // SESSION SAMPLING
+        // ================================
+
+        function getCohort(identifier, maxRange) {
+            let hash = 0;
+            for (let i = 0; i < identifier.length; i++) {
+                const char = identifier.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Convert to 32-bit integer
+            }
+            return Math.abs(hash) % maxRange;
+        }
+
+        function getDeviceIdentifier() {
+            // Try to get a stored device ID first
+            let deviceId = localStorage.getItem('device_id');
+    
+            if (!deviceId) {
+                // Generate a simple browser fingerprint as fallback
+                deviceId = [
+                    navigator.userAgent,
+                    navigator.language,
+                    screen.width + 'x' + screen.height,
+                    new Date().getTimezoneOffset()
+                ].join('|');
+        
+                // Optionally store it for consistency
+                localStorage.setItem('device_id', deviceId);
+            }
+    
+        return deviceId;
+        }
+
+        function shouldSampleSession() {
+            const sessionDecision = sessionStorage.getItem('fs_sample_decision');
+            if (sessionDecision !== null) {
+                return sessionDecision === 'true';
+            }
+    
+            const deviceId = getDeviceIdentifier();
+            if (!deviceId) {
+                return false;
+            }
+    
+            const samplesPerMillion = FULLSTORY_CONFIG.samplingRate * 1_000_000;
+            const cohortValue = getCohort(`interaction-recorder-${deviceId}`, 1_000_000);
+            const shouldSample = cohortValue < samplesPerMillion;
+    
+            sessionStorage.setItem('fs_sample_decision', shouldSample.toString());
+    
+            return shouldSample;
+        }
+
+        
+        // ================================
+        // MONTHLY CAP CHECK
+        // Commenting out but keeping it here until I confirm with FS team how exactly is this being capped
+        // ================================
+        // function checkMonthlyCap() {
+        //     try {
+        //         const currentCount = parseInt(localStorage.getItem(FULLSTORY_CONFIG.storageKey) || '0');
+        //         if (currentCount >= FULLSTORY_CONFIG.monthlySessionCap) {
+        //             return false;
+        //         }
+        //         localStorage.setItem(FULLSTORY_CONFIG.storageKey, (currentCount + 1).toString());
+        //         return true;
+        //     } catch (e) {
+        //         return true;
+        //     }
+        // }
+        
+        // ================================
+        // CONSENT CHECK
+        // ================================
+			function checkOneTrustConsent() {
+				// Always enable analytics in development mode for testing
+				if (false) {
+					return true;
+				}
+				// Check if OneTrust is available and consent is given (C0002 is performance cookies)
+				if (window.OnetrustActiveGroups && typeof window.OnetrustActiveGroups === "string") {
+					return window.OnetrustActiveGroups.includes('C0002');
+				}
+				// Default to disabling analytics
+				return false;
+			}
+        
+        // ================================
+        // FULLSTORY INITIALIZATION
+        // ================================
+        function initializeFullstory() {
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+            window['_fs_org'] = 'o-23F4NG-na1';
+            window['_fs_namespace'] = 'FS';
+            
+            !function(m,n,e,t,l,o,g,y){var s,f,a=function(h){
+            return!(h in m)||(m.console&&m.console.log&&m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'),!1)}(e)
+            ;function p(b){var h,d=[];function j(){h&&(d.forEach((function(b){var d;try{d=b[h[0]]&&b[h[0]](h[1])}catch(h){return void(b[3]&&b[3](h))}
+            d&&d.then?d.then(b[2],b[3]):b[2]&&b[2](d)})),d.length=0)}function r(b){return function(d){h||(h=[b,d],j())}}return b(r(0),r(1)),{
+            then:function(b,h){return p((function(r,i){d.push([b,h,r,i]),j()}))}}}a&&(g=m[e]=function(){var b=function(b,d,j,r){function i(i,c){
+            h(b,d,j,i,c,r)}r=r||2;var c,u=/Async$/;return u.test(b)?(b=b.replace(u,""),"function"==typeof Promise?new Promise(i):p(i)):h(b,d,j,c,c,r)}
+            ;function h(h,d,j,r,i,c){return b._api?b._api(h,d,j,r,i,c):(b.q&&b.q.push([h,d,j,r,i,c]),null)}return b.q=[],b}(),y=function(b){function h(h){
+            "function"==typeof h[4]&&h[4](new Error(b))}var d=g.q;if(d){for(var j=0;j<d.length;j++)h(d[j]);d.length=0,d.push=h}},function(){
+            (o=n.createElement(t)).async=!0,o.crossOrigin="anonymous",o.src="https://"+l,o.onerror=function(){y("Error loading "+l)}
+            ;var b=n.getElementsByTagName(t)[0];b&&b.parentNode?b.parentNode.insertBefore(o,b):n.head.appendChild(o)}(),function(){function b(){}
+            function h(b,h,d){g(b,h,d,1)}function d(b,d,j){h("setProperties",{type:b,properties:d},j)}function j(b,h){d("user",b,h)}function r(b,h,d){j({
+            uid:b},d),h&&j(h,d)}g.identify=r,g.setUserVars=j,g.identifyAccount=b,g.clearUserCookie=b,g.setVars=d,g.event=function(b,d,j){h("trackEvent",{
+            name:b,properties:d},j)},g.anonymize=function(){r(!1)},g.shutdown=function(){h("shutdown")},g.restart=function(){h("restart")},
+            g.log=function(b,d){h("log",{level:b,msg:d})},g.consent=function(b){h("setIdentity",{consent:!arguments.length||b})}}(),s="fetch",
+            f="XMLHttpRequest",g._w={},g._w[f]=m[f],g._w[s]=m[s],m[s]&&(m[s]=function(){return g._w[s].apply(this,arguments)}),g._v="2.0.0")
+            }(window,document,window._fs_namespace,"script",window._fs_script);
+            
+            // Set team space identifier
+            setTimeout(function() {
+                if (window.FS) {
+                    window.FS.setVars('page', {
+                        team: FULLSTORY_CONFIG.teamSpace,
+                        domain: window.location.hostname,
+                        source: 'flourish-website'
+                    });
+                    
+                    window.FS.setUserVars({
+                        team_space: FULLSTORY_CONFIG.teamSpace,
+                        product: 'flourish',
+                        domain: window.location.hostname
+                    });
+                }
+            }, 500);
+        }
+        
+        // ================================
+        // MAIN EXECUTION
+        // ================================
+        function attemptFullstoryLoad() {
+            if (!isDomainAllowed()) return;
+            if (isPageBlocked()) return;
+            if (!isPageAllowed()) return;
+            if (!checkOneTrustConsent()) return;
+            if (!shouldSampleSession()) return;
+            // if (!checkMonthlyCap()) return;
+            
+            initializeFullstory();
+        }
+        
+        // ================================
+        // CONSENT LISTENER
+        // ================================
+        function handleConsentChange() {
+            if (checkOneTrustConsent() && !window.FS) {
+                attemptFullstoryLoad();
+            } else if (!checkOneTrustConsent() && window.FS) {
+                window.FS.shutdown();
+            }
+        }
+        
+        // Listen for OneTrust loaded events - when it is first loaded on the page
+        window.addEventListener('onetrustloaded', handleConsentChange);
+
+        // Listen for consent change events - if someone changes their consent settings while on the page
+        window.addEventListener('onetrustconsentchanged', handleConsentChange);
+
+        // Fallback for older versions of OneTrust
+        document.addEventListener('OneTrustGroupsUpdated', handleConsentChange);
+
+        // ================================
+        // START
+        // ================================
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                setTimeout(attemptFullstoryLoad, 1000);
+            });
+        } else {
+            setTimeout(attemptFullstoryLoad, 1000);
+        }
+        
+    })();
+</script>
+
+	<!-- TODO: This is temporary. We should import properly with rollup or remove d3-dependency -->
+	
+<script src="/js/d3-dispatch.js"></script>
+
+	
+<script src="/js/d3-interpolate.js"></script>
+
+	
+<script src="/js/d3-selection.js"></script>
+
+	
+<script src="/js/d3-timer.js"></script>
+
+	
+<script src="/js/d3-transition.js"></script>
+
+
+	
+	<link rel="alternate" href="/atom.xml" title="Flourish" type="application/atom+xml">
+	
+
+	<link href="/highlight.css?3e9f1d3cf8a99ebe7f3f230bae0e7d41" rel="stylesheet">
+	<link href="/style.css?05022026" rel="stylesheet">
+
+<meta name="generator" content="Hexo 6.2.0"><script src="https://cdn-au.onetrust.com/scripttemplates/202301.2.0/otBannerSdk.js" async="" type="text/javascript"></script><script src="https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-client-hints@latest/dist/index.umd.min.js" async="1"></script><script src="https://cdn.jsdelivr.net/npm/@snowplow/browser-plugin-ga-cookies@latest/dist/index.umd.min.js" async="1"></script><style id="onetrust-style">#onetrust-banner-sdk{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}#onetrust-banner-sdk .onetrust-vendors-list-handler{cursor:pointer;color:#1f96db;font-size:inherit;font-weight:bold;text-decoration:none;margin-left:5px}#onetrust-banner-sdk .onetrust-vendors-list-handler:hover{color:#1f96db}#onetrust-banner-sdk:focus{outline:2px solid #000;outline-offset:-2px}#onetrust-banner-sdk a:focus{outline:2px solid #000}#onetrust-banner-sdk #onetrust-accept-btn-handler,#onetrust-banner-sdk #onetrust-reject-all-handler,#onetrust-banner-sdk #onetrust-pc-btn-handler{outline-offset:1px}#onetrust-banner-sdk.ot-bnr-w-logo .ot-bnr-logo{height:64px;width:64px}#onetrust-banner-sdk .ot-close-icon,#onetrust-pc-sdk .ot-close-icon,#ot-sync-ntfy .ot-close-icon{background-size:contain;background-repeat:no-repeat;background-position:center;height:12px;width:12px}#onetrust-banner-sdk .powered-by-logo,#onetrust-banner-sdk .ot-pc-footer-logo a,#onetrust-pc-sdk .powered-by-logo,#onetrust-pc-sdk .ot-pc-footer-logo a,#ot-sync-ntfy .powered-by-logo,#ot-sync-ntfy .ot-pc-footer-logo a{background-size:contain;background-repeat:no-repeat;background-position:center;height:25px;width:152px;display:block;text-decoration:none;font-size:0.75em}#onetrust-banner-sdk .powered-by-logo:hover,#onetrust-banner-sdk .ot-pc-footer-logo a:hover,#onetrust-pc-sdk .powered-by-logo:hover,#onetrust-pc-sdk .ot-pc-footer-logo a:hover,#ot-sync-ntfy .powered-by-logo:hover,#ot-sync-ntfy .ot-pc-footer-logo a:hover{color:#565656}#onetrust-banner-sdk h3 *,#onetrust-banner-sdk h4 *,#onetrust-banner-sdk h6 *,#onetrust-banner-sdk button *,#onetrust-banner-sdk a[data-parent-id] *,#onetrust-pc-sdk h3 *,#onetrust-pc-sdk h4 *,#onetrust-pc-sdk h6 *,#onetrust-pc-sdk button *,#onetrust-pc-sdk a[data-parent-id] *,#ot-sync-ntfy h3 *,#ot-sync-ntfy h4 *,#ot-sync-ntfy h6 *,#ot-sync-ntfy button *,#ot-sync-ntfy a[data-parent-id] *{font-size:inherit;font-weight:inherit;color:inherit}#onetrust-banner-sdk .ot-hide,#onetrust-pc-sdk .ot-hide,#ot-sync-ntfy .ot-hide{display:none !important}#onetrust-banner-sdk button.ot-link-btn:hover,#onetrust-pc-sdk button.ot-link-btn:hover,#ot-sync-ntfy button.ot-link-btn:hover{text-decoration:underline;opacity:1}#onetrust-pc-sdk .ot-sdk-row .ot-sdk-column{padding:0}#onetrust-pc-sdk .ot-sdk-container{padding-right:0}#onetrust-pc-sdk .ot-sdk-row{flex-direction:initial;width:100%}#onetrust-pc-sdk [type="checkbox"]:checked,#onetrust-pc-sdk [type="checkbox"]:not(:checked){pointer-events:initial}#onetrust-pc-sdk [type="checkbox"]:disabled+label::before,#onetrust-pc-sdk [type="checkbox"]:disabled+label:after,#onetrust-pc-sdk [type="checkbox"]:disabled+label{pointer-events:none;opacity:0.7}#onetrust-pc-sdk #vendor-list-content{transform:translate3d(0, 0, 0)}#onetrust-pc-sdk li input[type="checkbox"]{z-index:1}#onetrust-pc-sdk li .ot-checkbox label{z-index:2}#onetrust-pc-sdk li .ot-checkbox input[type="checkbox"]{height:auto;width:auto}#onetrust-pc-sdk li .host-title a,#onetrust-pc-sdk li .ot-host-name a,#onetrust-pc-sdk li .accordion-text,#onetrust-pc-sdk li .ot-acc-txt{z-index:2;position:relative}#onetrust-pc-sdk input{margin:3px 0.1ex}#onetrust-pc-sdk .pc-logo,#onetrust-pc-sdk .ot-pc-logo{height:60px;width:180px;background-position:center;background-size:contain;background-repeat:no-repeat;display:inline-flex;justify-content:center;align-items:center}#onetrust-pc-sdk .pc-logo img,#onetrust-pc-sdk .ot-pc-logo img{max-height:100%;max-width:100%}#onetrust-pc-sdk .screen-reader-only,#onetrust-pc-sdk .ot-scrn-rdr,.ot-sdk-cookie-policy .screen-reader-only,.ot-sdk-cookie-policy .ot-scrn-rdr{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}#onetrust-pc-sdk.ot-fade-in,.onetrust-pc-dark-filter.ot-fade-in,#onetrust-banner-sdk.ot-fade-in{animation-name:onetrust-fade-in;animation-duration:400ms;animation-timing-function:ease-in-out}#onetrust-pc-sdk.ot-hide{display:none !important}.onetrust-pc-dark-filter.ot-hide{display:none !important}#ot-sdk-btn.ot-sdk-show-settings,#ot-sdk-btn.optanon-show-settings{color:#68b631;border:1px solid #68b631;height:auto;white-space:normal;word-wrap:break-word;padding:0.8em 2em;font-size:0.8em;line-height:1.2;cursor:pointer;-moz-transition:0.1s ease;-o-transition:0.1s ease;-webkit-transition:1s ease;transition:0.1s ease}#ot-sdk-btn.ot-sdk-show-settings:hover,#ot-sdk-btn.optanon-show-settings:hover{color:#fff;background-color:#68b631}.onetrust-pc-dark-filter{background:rgba(0,0,0,0.5);z-index:2147483646;width:100%;height:100%;overflow:hidden;position:fixed;top:0;bottom:0;left:0}@keyframes onetrust-fade-in{0%{opacity:0}100%{opacity:1}}.ot-cookie-label{text-decoration:underline}@media only screen and (min-width: 426px) and (max-width: 896px) and (orientation: landscape){#onetrust-pc-sdk p{font-size:0.75em}}#onetrust-banner-sdk .banner-option-input:focus+label{outline:1px solid #000;outline-style:auto}.category-vendors-list-handler+a:focus,.category-vendors-list-handler+a:focus-visible{outline:2px solid #000}#onetrust-pc-sdk .ot-userid-title{margin-top:10px}#onetrust-pc-sdk .ot-userid-title>span,#onetrust-pc-sdk .ot-userid-timestamp>span{font-weight:700}#onetrust-pc-sdk .ot-userid-desc{font-style:italic}#onetrust-pc-sdk .ot-host-desc a{pointer-events:initial}#onetrust-pc-sdk .ot-ven-hdr>p a{position:relative;z-index:2;pointer-events:initial}#onetrust-pc-sdk .ot-vnd-serv .ot-vnd-item .ot-vnd-info a,#onetrust-pc-sdk .ot-vs-list .ot-vnd-item .ot-vnd-info a{margin-right:auto}#onetrust-pc-sdk .ot-pc-footer-logo img{width:136px;height:16px}#onetrust-banner-sdk .ot-optout-signal,#onetrust-pc-sdk .ot-optout-signal{border:1px solid #32ae88;border-radius:3px;padding:5px;margin-bottom:10px;background-color:#f9fffa;font-size:0.85rem;line-height:2}#onetrust-banner-sdk .ot-optout-signal .ot-optout-icon,#onetrust-pc-sdk .ot-optout-signal .ot-optout-icon{display:inline;margin-right:5px}#onetrust-banner-sdk .ot-optout-signal svg,#onetrust-pc-sdk .ot-optout-signal svg{height:20px;width:30px;transform:scale(0.5)}#onetrust-banner-sdk .ot-optout-signal svg path,#onetrust-pc-sdk .ot-optout-signal svg path{fill:#32ae88}
+#onetrust-banner-sdk,#onetrust-pc-sdk,#ot-sdk-cookie-policy,#ot-sync-ntfy{font-size:16px}#onetrust-banner-sdk *,#onetrust-banner-sdk ::after,#onetrust-banner-sdk ::before,#onetrust-pc-sdk *,#onetrust-pc-sdk ::after,#onetrust-pc-sdk ::before,#ot-sdk-cookie-policy *,#ot-sdk-cookie-policy ::after,#ot-sdk-cookie-policy ::before,#ot-sync-ntfy *,#ot-sync-ntfy ::after,#ot-sync-ntfy ::before{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}#onetrust-banner-sdk div,#onetrust-banner-sdk span,#onetrust-banner-sdk h1,#onetrust-banner-sdk h2,#onetrust-banner-sdk h3,#onetrust-banner-sdk h4,#onetrust-banner-sdk h5,#onetrust-banner-sdk h6,#onetrust-banner-sdk p,#onetrust-banner-sdk img,#onetrust-banner-sdk svg,#onetrust-banner-sdk button,#onetrust-banner-sdk section,#onetrust-banner-sdk a,#onetrust-banner-sdk label,#onetrust-banner-sdk input,#onetrust-banner-sdk ul,#onetrust-banner-sdk li,#onetrust-banner-sdk nav,#onetrust-banner-sdk table,#onetrust-banner-sdk thead,#onetrust-banner-sdk tr,#onetrust-banner-sdk td,#onetrust-banner-sdk tbody,#onetrust-banner-sdk .ot-main-content,#onetrust-banner-sdk .ot-toggle,#onetrust-banner-sdk #ot-content,#onetrust-banner-sdk #ot-pc-content,#onetrust-banner-sdk .checkbox,#onetrust-pc-sdk div,#onetrust-pc-sdk span,#onetrust-pc-sdk h1,#onetrust-pc-sdk h2,#onetrust-pc-sdk h3,#onetrust-pc-sdk h4,#onetrust-pc-sdk h5,#onetrust-pc-sdk h6,#onetrust-pc-sdk p,#onetrust-pc-sdk img,#onetrust-pc-sdk svg,#onetrust-pc-sdk button,#onetrust-pc-sdk section,#onetrust-pc-sdk a,#onetrust-pc-sdk label,#onetrust-pc-sdk input,#onetrust-pc-sdk ul,#onetrust-pc-sdk li,#onetrust-pc-sdk nav,#onetrust-pc-sdk table,#onetrust-pc-sdk thead,#onetrust-pc-sdk tr,#onetrust-pc-sdk td,#onetrust-pc-sdk tbody,#onetrust-pc-sdk .ot-main-content,#onetrust-pc-sdk .ot-toggle,#onetrust-pc-sdk #ot-content,#onetrust-pc-sdk #ot-pc-content,#onetrust-pc-sdk .checkbox,#ot-sdk-cookie-policy div,#ot-sdk-cookie-policy span,#ot-sdk-cookie-policy h1,#ot-sdk-cookie-policy h2,#ot-sdk-cookie-policy h3,#ot-sdk-cookie-policy h4,#ot-sdk-cookie-policy h5,#ot-sdk-cookie-policy h6,#ot-sdk-cookie-policy p,#ot-sdk-cookie-policy img,#ot-sdk-cookie-policy svg,#ot-sdk-cookie-policy button,#ot-sdk-cookie-policy section,#ot-sdk-cookie-policy a,#ot-sdk-cookie-policy label,#ot-sdk-cookie-policy input,#ot-sdk-cookie-policy ul,#ot-sdk-cookie-policy li,#ot-sdk-cookie-policy nav,#ot-sdk-cookie-policy table,#ot-sdk-cookie-policy thead,#ot-sdk-cookie-policy tr,#ot-sdk-cookie-policy td,#ot-sdk-cookie-policy tbody,#ot-sdk-cookie-policy .ot-main-content,#ot-sdk-cookie-policy .ot-toggle,#ot-sdk-cookie-policy #ot-content,#ot-sdk-cookie-policy #ot-pc-content,#ot-sdk-cookie-policy .checkbox,#ot-sync-ntfy div,#ot-sync-ntfy span,#ot-sync-ntfy h1,#ot-sync-ntfy h2,#ot-sync-ntfy h3,#ot-sync-ntfy h4,#ot-sync-ntfy h5,#ot-sync-ntfy h6,#ot-sync-ntfy p,#ot-sync-ntfy img,#ot-sync-ntfy svg,#ot-sync-ntfy button,#ot-sync-ntfy section,#ot-sync-ntfy a,#ot-sync-ntfy label,#ot-sync-ntfy input,#ot-sync-ntfy ul,#ot-sync-ntfy li,#ot-sync-ntfy nav,#ot-sync-ntfy table,#ot-sync-ntfy thead,#ot-sync-ntfy tr,#ot-sync-ntfy td,#ot-sync-ntfy tbody,#ot-sync-ntfy .ot-main-content,#ot-sync-ntfy .ot-toggle,#ot-sync-ntfy #ot-content,#ot-sync-ntfy #ot-pc-content,#ot-sync-ntfy .checkbox{font-family:inherit;font-weight:normal;-webkit-font-smoothing:auto;letter-spacing:normal;line-height:normal;padding:0;margin:0;height:auto;min-height:0;max-height:none;width:auto;min-width:0;max-width:none;border-radius:0;border:none;clear:none;float:none;position:static;bottom:auto;left:auto;right:auto;top:auto;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;white-space:normal;background:none;overflow:visible;vertical-align:baseline;visibility:visible;z-index:auto;box-shadow:none}#onetrust-banner-sdk label:before,#onetrust-banner-sdk label:after,#onetrust-banner-sdk .checkbox:after,#onetrust-banner-sdk .checkbox:before,#onetrust-pc-sdk label:before,#onetrust-pc-sdk label:after,#onetrust-pc-sdk .checkbox:after,#onetrust-pc-sdk .checkbox:before,#ot-sdk-cookie-policy label:before,#ot-sdk-cookie-policy label:after,#ot-sdk-cookie-policy .checkbox:after,#ot-sdk-cookie-policy .checkbox:before,#ot-sync-ntfy label:before,#ot-sync-ntfy label:after,#ot-sync-ntfy .checkbox:after,#ot-sync-ntfy .checkbox:before{content:"";content:none}
+#onetrust-banner-sdk .ot-sdk-container,#onetrust-pc-sdk .ot-sdk-container,#ot-sdk-cookie-policy .ot-sdk-container{position:relative;width:100%;max-width:100%;margin:0 auto;padding:0 20px;box-sizing:border-box}#onetrust-banner-sdk .ot-sdk-column,#onetrust-banner-sdk .ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-column,#onetrust-pc-sdk .ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-column,#ot-sdk-cookie-policy .ot-sdk-columns{width:100%;float:left;box-sizing:border-box;padding:0;display:initial}@media (min-width: 400px){#onetrust-banner-sdk .ot-sdk-container,#onetrust-pc-sdk .ot-sdk-container,#ot-sdk-cookie-policy .ot-sdk-container{width:90%;padding:0}}@media (min-width: 550px){#onetrust-banner-sdk .ot-sdk-container,#onetrust-pc-sdk .ot-sdk-container,#ot-sdk-cookie-policy .ot-sdk-container{width:100%}#onetrust-banner-sdk .ot-sdk-column,#onetrust-banner-sdk .ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-column,#onetrust-pc-sdk .ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-column,#ot-sdk-cookie-policy .ot-sdk-columns{margin-left:4%}#onetrust-banner-sdk .ot-sdk-column:first-child,#onetrust-banner-sdk .ot-sdk-columns:first-child,#onetrust-pc-sdk .ot-sdk-column:first-child,#onetrust-pc-sdk .ot-sdk-columns:first-child,#ot-sdk-cookie-policy .ot-sdk-column:first-child,#ot-sdk-cookie-policy .ot-sdk-columns:first-child{margin-left:0}#onetrust-banner-sdk .ot-sdk-two.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-two.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-two.ot-sdk-columns{width:13.3333333333%}#onetrust-banner-sdk .ot-sdk-three.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-three.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-three.ot-sdk-columns{width:22%}#onetrust-banner-sdk .ot-sdk-four.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-four.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-four.ot-sdk-columns{width:30.6666666667%}#onetrust-banner-sdk .ot-sdk-eight.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-eight.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-eight.ot-sdk-columns{width:65.3333333333%}#onetrust-banner-sdk .ot-sdk-nine.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-nine.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-nine.ot-sdk-columns{width:74%}#onetrust-banner-sdk .ot-sdk-ten.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-ten.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-ten.ot-sdk-columns{width:82.6666666667%}#onetrust-banner-sdk .ot-sdk-eleven.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-eleven.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-eleven.ot-sdk-columns{width:91.3333333333%}#onetrust-banner-sdk .ot-sdk-twelve.ot-sdk-columns,#onetrust-pc-sdk .ot-sdk-twelve.ot-sdk-columns,#ot-sdk-cookie-policy .ot-sdk-twelve.ot-sdk-columns{width:100%;margin-left:0}}#onetrust-banner-sdk h1,#onetrust-banner-sdk h2,#onetrust-banner-sdk h3,#onetrust-banner-sdk h4,#onetrust-banner-sdk h5,#onetrust-banner-sdk h6,#onetrust-pc-sdk h1,#onetrust-pc-sdk h2,#onetrust-pc-sdk h3,#onetrust-pc-sdk h4,#onetrust-pc-sdk h5,#onetrust-pc-sdk h6,#ot-sdk-cookie-policy h1,#ot-sdk-cookie-policy h2,#ot-sdk-cookie-policy h3,#ot-sdk-cookie-policy h4,#ot-sdk-cookie-policy h5,#ot-sdk-cookie-policy h6{margin-top:0;font-weight:600;font-family:inherit}#onetrust-banner-sdk h1,#onetrust-pc-sdk h1,#ot-sdk-cookie-policy h1{font-size:1.5rem;line-height:1.2}#onetrust-banner-sdk h2,#onetrust-pc-sdk h2,#ot-sdk-cookie-policy h2{font-size:1.5rem;line-height:1.25}#onetrust-banner-sdk h3,#onetrust-pc-sdk h3,#ot-sdk-cookie-policy h3{font-size:1.5rem;line-height:1.3}#onetrust-banner-sdk h4,#onetrust-pc-sdk h4,#ot-sdk-cookie-policy h4{font-size:1.5rem;line-height:1.35}#onetrust-banner-sdk h5,#onetrust-pc-sdk h5,#ot-sdk-cookie-policy h5{font-size:1.5rem;line-height:1.5}#onetrust-banner-sdk h6,#onetrust-pc-sdk h6,#ot-sdk-cookie-policy h6{font-size:1.5rem;line-height:1.6}@media (min-width: 550px){#onetrust-banner-sdk h1,#onetrust-pc-sdk h1,#ot-sdk-cookie-policy h1{font-size:1.5rem}#onetrust-banner-sdk h2,#onetrust-pc-sdk h2,#ot-sdk-cookie-policy h2{font-size:1.5rem}#onetrust-banner-sdk h3,#onetrust-pc-sdk h3,#ot-sdk-cookie-policy h3{font-size:1.5rem}#onetrust-banner-sdk h4,#onetrust-pc-sdk h4,#ot-sdk-cookie-policy h4{font-size:1.5rem}#onetrust-banner-sdk h5,#onetrust-pc-sdk h5,#ot-sdk-cookie-policy h5{font-size:1.5rem}#onetrust-banner-sdk h6,#onetrust-pc-sdk h6,#ot-sdk-cookie-policy h6{font-size:1.5rem}}#onetrust-banner-sdk p,#onetrust-pc-sdk p,#ot-sdk-cookie-policy p{margin:0 0 1em 0;font-family:inherit;line-height:normal}#onetrust-banner-sdk a,#onetrust-pc-sdk a,#ot-sdk-cookie-policy a{color:#565656;text-decoration:underline}#onetrust-banner-sdk a:hover,#onetrust-pc-sdk a:hover,#ot-sdk-cookie-policy a:hover{color:#565656;text-decoration:none}#onetrust-banner-sdk .ot-sdk-button,#onetrust-banner-sdk button,#onetrust-pc-sdk .ot-sdk-button,#onetrust-pc-sdk button,#ot-sdk-cookie-policy .ot-sdk-button,#ot-sdk-cookie-policy button{margin-bottom:1rem;font-family:inherit}#onetrust-banner-sdk .ot-sdk-button,#onetrust-banner-sdk button,#onetrust-pc-sdk .ot-sdk-button,#onetrust-pc-sdk button,#ot-sdk-cookie-policy .ot-sdk-button,#ot-sdk-cookie-policy button{display:inline-block;height:38px;padding:0 30px;color:#555;text-align:center;font-size:0.9em;font-weight:400;line-height:38px;letter-spacing:0.01em;text-decoration:none;white-space:nowrap;background-color:transparent;border-radius:2px;border:1px solid #bbb;cursor:pointer;box-sizing:border-box}#onetrust-banner-sdk .ot-sdk-button:hover,#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):hover,#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):focus,#onetrust-pc-sdk .ot-sdk-button:hover,#onetrust-pc-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):hover,#onetrust-pc-sdk :not(.ot-leg-btn-container)>button:not(.ot-link-btn):focus,#ot-sdk-cookie-policy .ot-sdk-button:hover,#ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:not(.ot-link-btn):hover,#ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:not(.ot-link-btn):focus{color:#333;border-color:#888;opacity:0.7}#onetrust-banner-sdk .ot-sdk-button:focus,#onetrust-banner-sdk :not(.ot-leg-btn-container)>button:focus,#onetrust-pc-sdk .ot-sdk-button:focus,#onetrust-pc-sdk :not(.ot-leg-btn-container)>button:focus,#ot-sdk-cookie-policy .ot-sdk-button:focus,#ot-sdk-cookie-policy :not(.ot-leg-btn-container)>button:focus{outline:2px solid #000}#onetrust-banner-sdk .ot-sdk-button.ot-sdk-button-primary,#onetrust-banner-sdk button.ot-sdk-button-primary,#onetrust-banner-sdk input[type="submit"].ot-sdk-button-primary,#onetrust-banner-sdk input[type="reset"].ot-sdk-button-primary,#onetrust-banner-sdk input[type="button"].ot-sdk-button-primary,#onetrust-pc-sdk .ot-sdk-button.ot-sdk-button-primary,#onetrust-pc-sdk button.ot-sdk-button-primary,#onetrust-pc-sdk input[type="submit"].ot-sdk-button-primary,#onetrust-pc-sdk input[type="reset"].ot-sdk-button-primary,#onetrust-pc-sdk input[type="button"].ot-sdk-button-primary,#ot-sdk-cookie-policy .ot-sdk-button.ot-sdk-button-primary,#ot-sdk-cookie-policy button.ot-sdk-button-primary,#ot-sdk-cookie-policy input[type="submit"].ot-sdk-button-primary,#ot-sdk-cookie-policy input[type="reset"].ot-sdk-button-primary,#ot-sdk-cookie-policy input[type="button"].ot-sdk-button-primary{color:#fff;background-color:#33c3f0;border-color:#33c3f0}#onetrust-banner-sdk .ot-sdk-button.ot-sdk-button-primary:hover,#onetrust-banner-sdk button.ot-sdk-button-primary:hover,#onetrust-banner-sdk input[type="submit"].ot-sdk-button-primary:hover,#onetrust-banner-sdk input[type="reset"].ot-sdk-button-primary:hover,#onetrust-banner-sdk input[type="button"].ot-sdk-button-primary:hover,#onetrust-banner-sdk .ot-sdk-button.ot-sdk-button-primary:focus,#onetrust-banner-sdk button.ot-sdk-button-primary:focus,#onetrust-banner-sdk input[type="submit"].ot-sdk-button-primary:focus,#onetrust-banner-sdk input[type="reset"].ot-sdk-button-primary:focus,#onetrust-banner-sdk input[type="button"].ot-sdk-button-primary:focus,#onetrust-pc-sdk .ot-sdk-button.ot-sdk-button-primary:hover,#onetrust-pc-sdk button.ot-sdk-button-primary:hover,#onetrust-pc-sdk input[type="submit"].ot-sdk-button-primary:hover,#onetrust-pc-sdk input[type="reset"].ot-sdk-button-primary:hover,#onetrust-pc-sdk input[type="button"].ot-sdk-button-primary:hover,#onetrust-pc-sdk .ot-sdk-button.ot-sdk-button-primary:focus,#onetrust-pc-sdk button.ot-sdk-button-primary:focus,#onetrust-pc-sdk input[type="submit"].ot-sdk-button-primary:focus,#onetrust-pc-sdk input[type="reset"].ot-sdk-button-primary:focus,#onetrust-pc-sdk input[type="button"].ot-sdk-button-primary:focus,#ot-sdk-cookie-policy .ot-sdk-button.ot-sdk-button-primary:hover,#ot-sdk-cookie-policy button.ot-sdk-button-primary:hover,#ot-sdk-cookie-policy input[type="submit"].ot-sdk-button-primary:hover,#ot-sdk-cookie-policy input[type="reset"].ot-sdk-button-primary:hover,#ot-sdk-cookie-policy input[type="button"].ot-sdk-button-primary:hover,#ot-sdk-cookie-policy .ot-sdk-button.ot-sdk-button-primary:focus,#ot-sdk-cookie-policy button.ot-sdk-button-primary:focus,#ot-sdk-cookie-policy input[type="submit"].ot-sdk-button-primary:focus,#ot-sdk-cookie-policy input[type="reset"].ot-sdk-button-primary:focus,#ot-sdk-cookie-policy input[type="button"].ot-sdk-button-primary:focus{color:#fff;background-color:#1eaedb;border-color:#1eaedb}#onetrust-banner-sdk input[type="text"],#onetrust-pc-sdk input[type="text"],#ot-sdk-cookie-policy input[type="text"]{height:38px;padding:6px 10px;background-color:#fff;border:1px solid #d1d1d1;border-radius:4px;box-shadow:none;box-sizing:border-box}#onetrust-banner-sdk input[type="text"],#onetrust-pc-sdk input[type="text"],#ot-sdk-cookie-policy input[type="text"]{-webkit-appearance:none;-moz-appearance:none;appearance:none}#onetrust-banner-sdk input[type="text"]:focus,#onetrust-pc-sdk input[type="text"]:focus,#ot-sdk-cookie-policy input[type="text"]:focus{border:1px solid #000;outline:0}#onetrust-banner-sdk label,#onetrust-pc-sdk label,#ot-sdk-cookie-policy label{display:block;margin-bottom:0.5rem;font-weight:600}#onetrust-banner-sdk input[type="checkbox"],#onetrust-pc-sdk input[type="checkbox"],#ot-sdk-cookie-policy input[type="checkbox"]{display:inline}#onetrust-banner-sdk ul,#onetrust-pc-sdk ul,#ot-sdk-cookie-policy ul{list-style:circle inside}#onetrust-banner-sdk ul,#onetrust-pc-sdk ul,#ot-sdk-cookie-policy ul{padding-left:0;margin-top:0}#onetrust-banner-sdk ul ul,#onetrust-pc-sdk ul ul,#ot-sdk-cookie-policy ul ul{margin:1.5rem 0 1.5rem 3rem;font-size:90%}#onetrust-banner-sdk li,#onetrust-pc-sdk li,#ot-sdk-cookie-policy li{margin-bottom:1rem}#onetrust-banner-sdk th,#onetrust-banner-sdk td,#onetrust-pc-sdk th,#onetrust-pc-sdk td,#ot-sdk-cookie-policy th,#ot-sdk-cookie-policy td{padding:12px 15px;text-align:left;border-bottom:1px solid #e1e1e1}#onetrust-banner-sdk button,#onetrust-pc-sdk button,#ot-sdk-cookie-policy button{margin-bottom:1rem;font-family:inherit}#onetrust-banner-sdk .ot-sdk-container:after,#onetrust-banner-sdk .ot-sdk-row:after,#onetrust-pc-sdk .ot-sdk-container:after,#onetrust-pc-sdk .ot-sdk-row:after,#ot-sdk-cookie-policy .ot-sdk-container:after,#ot-sdk-cookie-policy .ot-sdk-row:after{content:"";display:table;clear:both}#onetrust-banner-sdk .ot-sdk-row,#onetrust-pc-sdk .ot-sdk-row,#ot-sdk-cookie-policy .ot-sdk-row{margin:0;max-width:none;display:block}
+#onetrust-banner-sdk{box-shadow:0 0 18px rgba(0,0,0,.2)}#onetrust-banner-sdk.otFloatingRounded{position:fixed;background-color:#fff;width:60%;max-width:700px;z-index:2147483645;border-radius:2.5px;bottom:2em;left:1em;font-size:16px;max-height:90%;overflow-y:auto;overflow-x:hidden}#onetrust-banner-sdk.otRelFont{font-size:1rem}#onetrust-banner-sdk.ot-bottom-left[dir=rtl]{right:1em}#onetrust-banner-sdk.ot-bottom-right{left:auto;right:1em}#onetrust-banner-sdk.ot-bottom-right[dir=rtl]{left:1em;right:auto}#onetrust-banner-sdk .accept-btn-only{float:none !important;width:100%}#onetrust-banner-sdk .cookie-settings-btn-only{width:100%}#onetrust-banner-sdk::-webkit-scrollbar{width:11px}#onetrust-banner-sdk::-webkit-scrollbar-thumb{border-radius:10px;background:#c1c1c1}#onetrust-banner-sdk{scrollbar-arrow-color:#c1c1c1;scrollbar-darkshadow-color:#c1c1c1;scrollbar-face-color:#c1c1c1;scrollbar-shadow-color:#c1c1c1}#onetrust-banner-sdk h3{margin-bottom:0}#onetrust-banner-sdk h3,#onetrust-banner-sdk p{color:dimgray}#onetrust-banner-sdk .ot-sdk-container{padding:0;width:100%;margin:0}#onetrust-banner-sdk #onetrust-policy{margin-top:40px}#onetrust-banner-sdk .ot-optout-signal{margin:0 1.875rem .625rem 1.875rem}#onetrust-banner-sdk #onetrust-policy-title,#onetrust-banner-sdk #onetrust-button-group{float:left}#onetrust-banner-sdk #onetrust-button-group-parent{padding:10px 30px 4px 30px}#onetrust-banner-sdk .ot-gv-list-handler{padding:0 30px 10px 30px;font-size:.812em;margin-bottom:0;border:0;line-height:normal;height:auto;width:auto}#onetrust-banner-sdk #onetrust-policy-text,#onetrust-banner-sdk .ot-b-addl-desc{padding:0 30px 10px 30px;clear:both;font-size:.813em;line-height:1.5;margin:0}#onetrust-banner-sdk #onetrust-policy-text>*,#onetrust-banner-sdk #onetrust-policy-text a,#onetrust-banner-sdk .ot-b-addl-desc>*,#onetrust-banner-sdk .ot-b-addl-desc a{margin-bottom:0px;font-size:inherit;line-height:inherit}#onetrust-banner-sdk #onetrust-policy-text a,#onetrust-banner-sdk .ot-b-addl-desc a{font-weight:bold}#onetrust-banner-sdk .ot-b-addl-desc{display:block}#onetrust-banner-sdk .ot-dpd-desc>.ot-b-addl-desc{padding:0;margin-top:10px;margin-bottom:10px;line-height:1.5;font-size:1em}#onetrust-banner-sdk #onetrust-policy-title{display:inline-block;max-width:calc(100% - 75px);padding-left:30px;font-size:1em;line-height:1.5;padding-bottom:10px}#onetrust-banner-sdk #onetrust-button-group{float:right}#onetrust-banner-sdk .onetrust-banner-options{float:right;max-width:55%}#onetrust-banner-sdk #onetrust-accept-btn-handler,#onetrust-banner-sdk #onetrust-reject-all-handler,#onetrust-banner-sdk #onetrust-pc-btn-handler{background-color:#68b631;color:#fff;border-color:#68b631;margin-right:1em;min-width:130px;height:auto;white-space:normal;word-break:break-word;word-wrap:break-word;padding:12px 10px;line-height:1.2;font-weight:600;font-size:.813em}#onetrust-banner-sdk #onetrust-accept-btn-handler{margin-right:0}#onetrust-banner-sdk #onetrust-pc-btn-handler{border:1px solid #68b631;min-width:175px;max-width:40%}#onetrust-banner-sdk #onetrust-pc-btn-handler.cookie-setting-link{background-color:#fff;border:none;color:#68b631;text-decoration:underline;margin-right:1rem}#onetrust-banner-sdk .has-reject-all-button #onetrust-button-group{width:100%}#onetrust-banner-sdk .has-reject-all-button #onetrust-pc-btn-handler.cookie-setting-link{text-align:left;padding-left:0;padding-right:0}#onetrust-banner-sdk #onetrust-close-btn-container{right:20px;top:10px;position:absolute}#onetrust-banner-sdk .ot-close-icon{height:44px;width:44px;background-size:12px;margin:-10px -10px 0 0;display:inline-block;border:none;padding:0px}#onetrust-banner-sdk .banner_logo{display:none}#onetrust-banner-sdk.ot-bnr-w-logo #onetrust-policy{margin-top:75px}#onetrust-banner-sdk.ot-bnr-w-logo .ot-bnr-logo{position:absolute;top:10px}#onetrust-banner-sdk #banner-options{float:left;padding:0 30px 0 30px;width:calc(100% - 60px)}#onetrust-banner-sdk .banner-option-input{cursor:pointer;width:auto;height:auto;border:none;padding:0;padding-right:3px;margin:0 0 6px;font-size:.82em;line-height:1.4}#onetrust-banner-sdk .banner-option-input *{pointer-events:none;font-size:inherit;line-height:inherit}#onetrust-banner-sdk .banner-option-input[aria-expanded=true] .ot-arrow-container{transform:rotate(90deg)}#onetrust-banner-sdk .banner-option-input[aria-expanded=true]~.banner-option-details{height:auto;display:block}#onetrust-banner-sdk .banner-option-header{cursor:pointer;display:inline-block}#onetrust-banner-sdk .banner-option-header :first-child{color:dimgray;font-weight:bold;float:left}#onetrust-banner-sdk .banner-option{margin-bottom:10px}#onetrust-banner-sdk .ot-arrow-container,#onetrust-banner-sdk .banner-option-details{transition:all 300ms ease-in 0s;-webkit-transition:all 300ms ease-in 0s;-moz-transition:all 300ms ease-in 0s;-o-transition:all 300ms ease-in 0s}#onetrust-banner-sdk .ot-arrow-container{display:inline-block;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid dimgray;margin-left:10px;vertical-align:middle}#onetrust-banner-sdk .banner-option-details{display:none;font-size:.83em;line-height:1.5;height:0px;padding:10px 10px 5px 10px}#onetrust-banner-sdk .banner-option-details *{font-size:inherit;line-height:inherit;color:dimgray}#onetrust-banner-sdk .ot-dpd-container{float:left;padding:0 30px 0 30px;clear:both}#onetrust-banner-sdk .ot-dpd-title{font-weight:bold;padding-bottom:10px;line-height:1.4;font-size:1em}#onetrust-banner-sdk .ot-dpd-desc{font-size:.813em;line-height:1.5}#onetrust-banner-sdk .ot-dpd-desc .onetrust-vendors-list-handler{display:block;margin-left:0px;margin-top:5px;padding:0;margin-bottom:0;border:0;line-height:normal;height:auto;width:auto}#onetrust-banner-sdk #onetrust-policy-text a{margin-left:5px}#onetrust-banner-sdk :not(.ot-dpd-desc)>.ot-b-addl-desc{font-size:.813em;line-height:1.5;margin:0;padding-bottom:10px}#onetrust-banner-sdk.ot-close-btn-link #onetrust-close-btn-container{top:15px;transform:none;right:15px}#onetrust-banner-sdk.ot-close-btn-link #onetrust-close-btn-container button{padding:0;white-space:pre-wrap;border:none;height:auto;line-height:1.5;text-decoration:underline;font-size:.69em}#onetrust-banner-sdk.ot-close-btn-link.ot-wo-title #onetrust-group-container{margin-top:20px}@media only screen and (max-width: 425px){#onetrust-banner-sdk #onetrust-button-group{margin-top:0}#onetrust-banner-sdk button{padding:0 20px}#onetrust-banner-sdk #onetrust-close-btn-container{right:15px}#onetrust-banner-sdk #onetrust-policy-title{padding-left:15px}#onetrust-banner-sdk #onetrust-button-group-parent,#onetrust-banner-sdk .ot-dpd-container{padding:0 15px 0px 15px}#onetrust-banner-sdk #onetrust-policy-text,#onetrust-banner-sdk .ot-gv-list-handler,#onetrust-banner-sdk :not(.ot-dpd-desc)>.ot-b-addl-desc{padding:0 15px 10px 15px}#onetrust-banner-sdk .ot-optout-signal{margin:0 1.875rem .625rem 1.875rem}#onetrust-banner-sdk #ot-gv-link-ctnr{margin-bottom:15px}#onetrust-banner-sdk #onetrust-button-group button{width:100%}#onetrust-banner-sdk #banner-options{padding:0 15px 0 15px;width:calc(100% - 30px)}#onetrust-banner-sdk .banner-option{margin-bottom:6px}#onetrust-banner-sdk #onetrust-button-group,#onetrust-banner-sdk .onetrust-banner-options{width:100%}#onetrust-banner-sdk #onetrust-pc-btn-handler{margin-right:0px}#onetrust-banner-sdk.otFloatingRounded,#onetrust-banner-sdk.otFloatingRounded[dir=rtl]{left:0;bottom:0;width:100%;right:0}}@media only screen and (max-width: 550px){#onetrust-banner-sdk .ot-close-icon{padding:0}#onetrust-banner-sdk.ot-close-btn-link #onetrust-group-container{margin-top:20px}}@media only screen and (min-width: 426px)and (max-width: 896px){#onetrust-banner-sdk.otFloatingRounded{width:95%}#onetrust-banner-sdk #onetrust-button-group-parent{width:100%}}@media only screen and (max-width: 640px){#onetrust-banner-sdk #onetrust-button-group{text-align:center}#onetrust-banner-sdk .onetrust-banner-options,#onetrust-banner-sdk #onetrust-pc-btn-handler{max-width:100%;display:inline-block;text-align:center}#onetrust-banner-sdk .has-reject-all-button .onetrust-banner-options{width:100%}#onetrust-banner-sdk .has-reject-all-button #onetrust-pc-btn-handler.cookie-setting-link{text-align:center}}
+        #onetrust-consent-sdk #onetrust-banner-sdk {background-color: #EEF6FF;}
+            #onetrust-consent-sdk #onetrust-policy-title,
+                    #onetrust-consent-sdk #onetrust-policy-text,
+                    #onetrust-consent-sdk .ot-b-addl-desc,
+                    #onetrust-consent-sdk .ot-dpd-desc,
+                    #onetrust-consent-sdk .ot-dpd-title,
+                    #onetrust-consent-sdk #onetrust-policy-text *:not(.onetrust-vendors-list-handler),
+                    #onetrust-consent-sdk .ot-dpd-desc *:not(.onetrust-vendors-list-handler),
+                    #onetrust-consent-sdk #onetrust-banner-sdk #banner-options *,
+                    #onetrust-banner-sdk .ot-cat-header,
+                    #onetrust-banner-sdk .ot-optout-signal
+                    {
+                        color: #0d1216;
+                    }
+            #onetrust-consent-sdk #onetrust-banner-sdk .banner-option-details {
+                    background-color: #c2deff;}
+             #onetrust-consent-sdk #onetrust-banner-sdk a[href],
+                    #onetrust-consent-sdk #onetrust-banner-sdk a[href] font,
+                    #onetrust-consent-sdk #onetrust-banner-sdk .ot-link-btn
+                        {
+                            color: #0d1216;
+                        }#onetrust-consent-sdk #onetrust-accept-btn-handler,
+                         #onetrust-banner-sdk #onetrust-reject-all-handler {
+                            background-color: #c2deff;border-color: #c2deff;
+                color: #0d1216;
+            }
+            #onetrust-consent-sdk #onetrust-banner-sdk *:focus,
+            #onetrust-consent-sdk #onetrust-banner-sdk:focus {
+               outline-color: #c2deff;
+               outline-width: 1px;
+            }
+            #onetrust-consent-sdk #onetrust-pc-btn-handler,
+            #onetrust-consent-sdk #onetrust-pc-btn-handler.cookie-setting-link {
+                color: #0d1216; border-color: #0d1216;
+                background-color:
+                #c2deff;
+            }#onetrust-policy-title {
+  padding-top: 10px;
+}
+
+#onetrust-button-group button {
+    border-radius: 24px;
+}
+#onetrust-consent-sdk #onetrust-accept-btn-handler:hover,
+#onetrust-banner-sdk #onetrust-reject-all-handler:hover {
+    background-color: #B0CAE8;
+    opacity: 1.0;
+}.ot-sdk-cookie-policy{font-family:inherit;font-size:16px}.ot-sdk-cookie-policy.otRelFont{font-size:1rem}.ot-sdk-cookie-policy h3,.ot-sdk-cookie-policy h4,.ot-sdk-cookie-policy h6,.ot-sdk-cookie-policy p,.ot-sdk-cookie-policy li,.ot-sdk-cookie-policy a,.ot-sdk-cookie-policy th,.ot-sdk-cookie-policy #cookie-policy-description,.ot-sdk-cookie-policy .ot-sdk-cookie-policy-group,.ot-sdk-cookie-policy #cookie-policy-title{color:dimgray}.ot-sdk-cookie-policy #cookie-policy-description{margin-bottom:1em}.ot-sdk-cookie-policy h4{font-size:1.2em}.ot-sdk-cookie-policy h6{font-size:1em;margin-top:2em}.ot-sdk-cookie-policy th{min-width:75px}.ot-sdk-cookie-policy a,.ot-sdk-cookie-policy a:hover{background:#fff}.ot-sdk-cookie-policy thead{background-color:#f6f6f4;font-weight:bold}.ot-sdk-cookie-policy .ot-mobile-border{display:none}.ot-sdk-cookie-policy section{margin-bottom:2em}.ot-sdk-cookie-policy table{border-collapse:inherit}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy{font-family:inherit;font-size:1rem}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy h3,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy h4,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy h6,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy p,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy li,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy a,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy th,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-description,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-cookie-policy-group,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-title{color:dimgray}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-description{margin-bottom:1em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-subgroup{margin-left:1.5em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-description,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-cookie-policy-group-desc,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-table-header,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy a,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy span,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td{font-size:.9em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td span,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td a{font-size:inherit}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-cookie-policy-group{font-size:1em;margin-bottom:.6em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-cookie-policy-title{margin-bottom:1.2em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy>section{margin-bottom:1em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy th{min-width:75px}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy a,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy a:hover{background:#fff}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy thead{background-color:#f6f6f4;font-weight:bold}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-mobile-border{display:none}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy section{margin-bottom:2em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-subgroup ul li{list-style:disc;margin-left:1.5em}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-subgroup ul li h4{display:inline-block}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table{border-collapse:inherit;margin:auto;border:1px solid #d7d7d7;border-radius:5px;border-spacing:initial;width:100%;overflow:hidden}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table th,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table td{border-bottom:1px solid #d7d7d7;border-right:1px solid #d7d7d7}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table tr:last-child td{border-bottom:0px}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table tr th:last-child,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table tr td:last-child{border-right:0px}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table .ot-host,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table .ot-cookies-type{width:25%}.ot-sdk-cookie-policy[dir=rtl]{text-align:left}#ot-sdk-cookie-policy h3{font-size:1.5em}@media only screen and (max-width: 530px){.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) table,.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) thead,.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) tbody,.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) th,.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) td,.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) tr{display:block}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) thead tr{position:absolute;top:-9999px;left:-9999px}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) tr{margin:0 0 1em 0}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) tr:nth-child(odd),.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) tr:nth-child(odd) a{background:#f6f6f4}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) td{border:none;border-bottom:1px solid #eee;position:relative;padding-left:50%}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) td:before{position:absolute;height:100%;left:6px;width:40%;padding-right:10px}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) .ot-mobile-border{display:inline-block;background-color:#e4e4e4;position:absolute;height:100%;top:0;left:45%;width:2px}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) td:before{content:attr(data-label);font-weight:bold}.ot-sdk-cookie-policy:not(#ot-sdk-cookie-policy-v2) li{word-break:break-word;word-wrap:break-word}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table{overflow:hidden}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table td{border:none;border-bottom:1px solid #d7d7d7}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy thead,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy tbody,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy th,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy tr{display:block}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table .ot-host,#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table .ot-cookies-type{width:auto}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy tr{margin:0 0 1em 0}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td:before{height:100%;width:40%;padding-right:10px}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td:before{content:attr(data-label);font-weight:bold}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy li{word-break:break-word;word-wrap:break-word}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy thead tr{position:absolute;top:-9999px;left:-9999px;z-index:-9999}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table tr:last-child td{border-bottom:1px solid #d7d7d7;border-right:0px}#ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table tr:last-child td:last-child{border-bottom:0px}}
+                
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy h5,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy h6,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy li,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy p,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy a,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy span,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy td,
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-description {
+                        color: #191b26;
+                    }
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy th {
+                        color: #191b26;
+                    }
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy .ot-sdk-cookie-policy-group {
+                        color: #191b26;
+                    }
+                    
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy #cookie-policy-title {
+                            color: #191b26;
+                        }
+                    
+            
+                    #ot-sdk-cookie-policy-v2.ot-sdk-cookie-policy table th {
+                            background-color: #F8F8F8;
+                        }
+                    
+            .ot-floating-button__front{background-image:url('https://cdn-au.onetrust.com/logos/static/ot_persistent_cookie_icon.png')}</style></head>
+
+<body onclick="" class="is-static">
+	
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBJJP4J" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe>
+	</noscript>
+
+	<script>
+		/**
+		 * Safely get the nearest element matching a selector
+		 */
+		const findClosestElement = (element, selector) => {
+			if (!element || !element.closest) {
+				return null;
+			}
+
+			try {
+				return element.closest(selector);
+			} catch (error) {
+				console.warn('Error finding closest element:', error);
+				return null;
+			}
+		}
+
+		/**
+		 * Get data from the closest parent with specified attribute
+		 */
+		const getInheritedData = (element, attribute) => {
+			try {
+				const dataAttr = `data-${attribute}`;
+				let current = element;
+
+				while (current && current.nodeType === Node.ELEMENT_NODE) {
+					if (current.hasAttribute(dataAttr)) {
+						return current.getAttribute(dataAttr);
+					}
+					current = current.parentElement;
+				}
+				return null;
+			} catch (error) {
+				console.warn('Failed to get inherited data:', error);
+				return null;
+			}
+		}
+
+		/**
+		 * Initialize auto-tracking
+		 */
+		const initAutoTracking = () => {
+			try {
+				// Track clicks
+				document.addEventListener('click', (e) => {
+					if (!(e?.target instanceof HTMLElement)) return;
+
+					const element = findClosestElement(e.target, '[data-track]');
+					if (!element) return;
+
+					FlourishAnalytics.track(element);
+				});
+			} catch (error) {
+				console.warn('Failed to initialize auto-tracking:', error);
+			}
+		};
+		const initializeTracking = () => {
+			initAutoTracking();
+		};
+
+		/**
+		 * Get all tracking data for an element
+		 */
+		const getTrackingData = (element) => {
+			try {
+				// Ensure we're working with an HTML element
+				if (!(element instanceof HTMLElement)) {
+					console.warn('Invalid element provided to getTrackingData');
+					return {};
+				}
+
+				// Derive component name
+				let component = element.dataset.component;
+				if (!component) {
+					if (element.tagName === 'A' && element.href) {
+						// For links, use the last URL segment
+						const path = element.getAttribute('href').replace(/\/$/, '');
+						const lastPart = path.split('/').pop();
+						component = lastPart || 'page';
+					} else if (element.tagName === 'BUTTON') {
+						// For buttons, use text content or fallback
+						const text = element.textContent?.trim().toLowerCase().replace(/[^a-z0-9]+/g, '_');
+						component = text || 'button';
+					} else {
+						// Fallback for other elements
+						component = element.id || 'interaction';
+					}
+				}
+
+				// Find closest container with section info
+				let section = getInheritedData(element, 'section');
+
+				// If no section, fall back to the container lookup
+				if (!section) {
+					// Look for standard section containers
+					const sectionContainer = element.closest('[class*="section"],[class*="container"],[id*="section"],[id*="container"]');
+					if (sectionContainer) {
+						section = sectionContainer.id ||
+							sectionContainer.className.split(' ')[0] ||
+							'main';
+					} else {
+						section = 'main';
+					}
+				}
+
+				return {
+					section,
+					section_id: getInheritedData(element, 'section-id'),
+					section_group: getInheritedData(element, 'section-group'),
+					component,
+					component_id: getInheritedData(element, 'component-id')
+				};
+			} catch (error) {
+				console.warn('Failed to get tracking data:', error);
+				return {};
+			}
+		}
+
+		window.FlourishAnalytics = {
+			// Track an interaction
+			track: function (element, overrides = {}) {
+				try {
+					if (!window?.sp?.trackInteraction) {
+						console.warn('Analytics tracking is not available');
+						return;
+					}
+
+					// Ensure we have a valid HTML element
+					if (!(element instanceof HTMLElement)) {
+						console.warn('Invalid element provided to track');
+						return;
+					}
+
+					const trackValue = element.dataset.track;
+					const defaultInteractionType = (trackValue && trackValue !== 'click' && trackValue !== 'true')
+						? trackValue
+						: 'click';
+
+					const params = {
+						...getTrackingData(element),
+						interaction_type: overrides.interaction_type || defaultInteractionType,
+						...overrides
+					};
+
+					if (params.section && params.component) {
+						window.sp.trackInteraction(params);
+					} else {
+						console.warn('Missing required tracking fields:', {
+							section: params.section,
+							component: params.component
+						});
+					}
+				} catch (error) {
+					console.warn('Failed to track interaction:', error);
+				}
+			},
+
+			// For general clicks/interactions
+			trackClick: function (element, options = {}) {
+				this.track(element, { interaction_type: 'click', ...options });
+			},
+
+			// For form interactions
+			trackForm: function (form, action = 'submit', options = {}) {
+				if (!(form instanceof HTMLElement)) return;
+
+				const formData = {
+					form_id: form.id || undefined,
+					form_name: form.getAttribute('name') || undefined,
+					form_action: action,
+					...options
+				};
+
+				window.sp.trackFormInteraction(formData);
+			},
+		};
+
+		// Initialize auto-tracking
+		initializeTracking();
+	</script>
+
+
+<!-- onclick is used to make hover states work on Safari -->
+	
+	<div class="row header not-logged-in" data-section="header">
+	<div class="row-inner">
+		<a href="/" class="logo clickable menu-item" data-track="click" data-component="logo">
+			<img data-target="home" id="logo" src="/images/Flourish_Logo_Black_small.png" alt="Flourish logo">
+		</a>
+		<div class="menu-holder">
+			<div class="menu desktop-nav">
+				<div class="dropdown-menu sub-menu" id="main-menu">
+					<div class="dropdown-menu-item-wrapper">
+						<span>Data visualization and storytelling</span>
+					</div>
+				</div>
+				<div id="account-menu">
+					<a class="btn log-in-link" target="_blank" rel="noopener" href="https://app.flourish.studio/login" data-track="click" data-component="login">Log in</a>
+					<a class="btn sign-up-link" target="_blank" rel="noopener" href="https://app.flourish.studio/register" data-track="click" data-component="signup">Sign up</a>
+				</div>
+			</div>
+			<div class="mobile-nav">
+				<div id="account-menu-blog">
+					<a class="btn sign-up-link" target="_blank" rel="noopener" href="https://app.flourish.studio/register" data-track="click" data-component="signup_mobile">Sign up</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+	<div class="content" style="min-height: calc(-491.344px + 100vh);">
+		<div class="row static">
+			<div class="page page-" id="page-blog">
+	<div class="page-content-container">
+		<div class="row-inner">
+			<div class="social-buttons side" style="opacity: 1; pointer-events: all;">
+				<div class="social-button facebook round"><img class="social-icon" src="/images/icons/facebook-logo.svg"></div>
+				<div class="social-button twitter round"><img class="social-icon" src="/images/icons/x-logo-black.svg"></div>
+				<div class="social-button linkedin round"><img class="social-icon" src="/images/icons/linkedin-logo-black.svg"></div>
+				<div class="social-button email round"><img class="social-icon" src="/images/icons/envelope-icon.svg"></div>
+			</div>
+			<div class="page-content-paragraphs">
+				<article class="article article-type-post">
+	<div class="article-inner">
+		
+
+		<header class="article-header">
+			
+			
+    <h1 class="article-title" itemprop="name">
+      16 ways to visualize US elections data
+    </h1>
+    
+      <h2 class="subtitle">
+        Master every stage of election reporting with our guide to visualizing US election data: from predictions to post-vote insights
+      </h2>
+    
+
+			
+				<div class="article-meta text-width">
+				  
+					Posted on <strong><time datetime="2024-09-05T23:00:00.000Z" itemprop="datePublished">06 September 2024</time></strong>
+					
+					by <strong>Flourish team</strong>
+					
+				  
+				</div>
+			  
+
+			  
+
+			
+			<div class="social-buttons top text-width">
+				<div class="social-button facebook round"><img class="social-icon" src="/images/icons/facebook-logo.svg"></div>
+				<div class="social-button twitter round"><img class="social-icon" src="/images/icons/x-logo-black.svg"></div>
+				<div class="social-button linkedin round"><img class="social-icon" src="/images/icons/linkedin-logo-black.svg"></div>
+				<div class="social-button email round"><img class="social-icon" src="/images/icons/envelope-icon.svg"></div>
+			</div>
+			
+		</header>
+
+		
+		<div class="article-entry">
+			
+				<figure class="text-width">
+    <div class="flourish-embed flourish-countdown" data-src="visualisation/16293793?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16293793/embed?auto=1" style="width: 100%; height: 372px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-countdown"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>During election season, readers expect more than just good writing. They also want exceptional visual reporting – which, however, often requires a lot of time and resources. </p>
+<p>That’s where Flourish comes in! We’ve curated a range of visualizations, primarily showcasing US elections and some from the European Parliament. However, these adaptable templates can be used for any global election coverage, helping you enhance your reports and engage your audience effectively.</p>
+<h2 id="Show-the-number-of-seats-owned-by-each-party-with-a-parliament-chart"><a href="#Show-the-number-of-seats-owned-by-each-party-with-a-parliament-chart" class="headerlink" title="Show the number of seats owned by each party with a parliament chart"></a>Show the number of seats owned by each party with a parliament chart</h2><p>The first question any newsroom has to answer is: <em>Who won?</em> While there are different ways to provide this information, one of the most straightforward is to use a <strong>parliament chart</strong>. </p>
+<figure class="text-width">
+<div class="flourish-embed flourish-parliament" data-src="visualisation/16218766?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16218766/embed?auto=1" style="width: 100%; height: 649.188px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-parliament-chart"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>Parliament charts use a simple color-coding system to represent different parties or groups and show the relative strength of each one. By looking at the number of circles in each color, we can quickly compare the distribution of seats held by each political party.</p>
+<p>In Flourish, you can also <a target="_blank" rel="noopener" href="https://help.flourish.studio/article/414-parliament-chart-an-overview">add filter controls</a> that allow readers to view distribution from previous elections. By switching between 2023 and 2020 in the example above, readers can easily see historical differences. </p>
+<p>The best thing about Flourish Parliament charts? They are <strong>incredibly simple to make</strong> – all you need is a dataset with parties and their seat numbers. They also have lots of customization options: tweak the shape of the parliament layout, assign specific colors to each party, and add a results table or majority majority threshold line. Take a look at <a href="https://flourish.studio/blog/how-to-make-parliament-chart/">our blog post</a> to learn how to create one!</p>
+<h2 id="Visualize-seat-majority-with-an-Election-Results-Chart"><a href="#Visualize-seat-majority-with-an-Election-Results-Chart" class="headerlink" title="Visualize seat majority with an Election Results Chart"></a>Visualize seat majority with an Election Results Chart</h2><p>The stacked <strong>Election Results Chart</strong> is a great tool to help people understand the outcomes of elections clearly and concisely. The visualization shows the number of seats won by each party, with the colors indicating which party the seats belong to. </p>
+<figure class="text-width">
+    <div class="flourish-embed flourish-election" data-src="visualisation/16189457?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16189457/embed?auto=1" style="width: 100%; height: 235.188px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-election-results-chart"><div class="btn cta">Create your own »</div></a></figure>
+
+<figure class="small right shadow">
+    <img src="https://public.flourish.studio/uploads/654906/2d58c446-bfca-4f54-adf1-6382b5b0be4e.gif" alt="GIF showing the Data tab of the Flourish Election Results Chart">
+</figure>
+
+<p>To determine which party gained or lost seats in the latest election cycle, you can provide more information in the <strong>Historical Data tab</strong>, and the template will automatically calculate the difference.</p>
+<p>Another great thing about this chart type is that, unlike the Parliament Chart, the Election Results Chart allows you to <a target="_blank" rel="noopener" href="https://help.flourish.studio/article/522-election-results-chart-an-overview"><strong>add results by subcategory</strong></a>, which you can toggle between using the dropdown menu. </p>
+<p>In the example below, you can see the results for the whole of the European Parliament, as well as each of the individual EU countries. The dropdown is a great way to slice the results by any number of interesting factors – things like state, constituency, gender, age, or race.</p>
+<figure class="text-width">
+    <div class="flourish-embed flourish-election" data-src="visualisation/19061762?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/19061762/embed?auto=1" style="width: 100%; height: 322.688px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-election-results-chart"><div class="btn cta">Create your own »</div></a></figure>
+
+<h2 id="Map-elections-in-multiple-ways"><a href="#Map-elections-in-multiple-ways" class="headerlink" title="Map elections in multiple ways"></a>Map elections in multiple ways</h2><p>Another way to visually inform your readers about the results of any election is to display them <strong>geographically</strong>. Instead of just showing who won, you’ll also be telling your readers <em>where</em> they won, adding another level of depth to their understanding.</p>
+<p>There are multiple different ways in which you can map the elections – for example, by using a state or county map, or by creating a hex map instead. Whether you want to display county-level vote shares, margin of victory, or even percent of turnover, <a href="https://flourish.studio/blog/choosing-the-right-map-type-for-your-data/">Flourish maps</a> can showcase any data you choose.</p>
+<h3 id="Hex-maps"><a href="#Hex-maps" class="headerlink" title="Hex maps"></a>Hex maps</h3><p>Hex maps are a form of cartogram, meaning that the geography is adjusted so that regions of equal importance – e.g. by population or electoral significance – take up the same area on the map. In the case of a hex map, each region is represented as one or more hexagons.</p>
+<figure class="wide">
+<div class="flourish-embed flourish-table" data-src="visualisation/16278913?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16278913/embed?auto=1" style="width: 100%; height: 584.25px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-projection-map"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>One benefit of using hex maps is that by standardizing the shape and size of each state, we can show state-level results while <strong>countering the visual imbalance</strong> created between the significantly larger Western states and the smaller but more populous Eastern ones.</p>
+<p>Showing state-level results doesn’t tell the whole story, however, since different states have different numbers of electoral college votes. For a richer visualization, you can choose our <strong>Electoral college hex map starting point</strong> instead, where each state has hexagons that represent its individual electoral votes.</p>
+<h3 id="Traditional-political-maps"><a href="#Traditional-political-maps" class="headerlink" title="Traditional political maps"></a>Traditional political maps</h3><p>In addition to hex maps, you may also want to make use of our geographically common starting points for US states, counties or congressional districts, all of which you’ll find in the <a target="_blank" rel="noopener" href="https://app.flourish.studio/templates?folder_id=">template chooser</a>.</p>
+<figure class="text-width">
+<div class="flourish-embed flourish-map" data-src="visualisation/16277021?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16277021/embed?auto=1" style="width: 100%; height: 523.562px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-projection-map"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>As with almost all Flourish templates, it’s easy to <strong>customize the popups</strong> with images and styling. As the example above shows, you can even create charts in the popups by using columns from your data sheet! Head over to <a target="_blank" rel="noopener" href="https://help.flourish.studio/article/70-how-to-add-charts-to-your-popups-or-panels">our help doc</a> to grab the custom HTML code you’ll need.</p>
+<h3 id="Swing-arrow-maps"><a href="#Swing-arrow-maps" class="headerlink" title="Swing arrow maps"></a>Swing arrow maps</h3><p>Swing is a popular election variable to visualize on a map. It shows the extent of change in voter support, typically from one election to another, expressed as a positive or negative percentage. </p>
+<figure class="text-width">
+<div class="flourish-embed flourish-map" data-src="visualisation/16279064?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16279064/embed?auto=1" style="width: 100%; height: 678.078px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-projection-map"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>However, swing arrow maps alone may not provide all the context a reader needs, as a swing towards one party doesn’t necessarily mean that party won the area; it just means they improved compared to the previous measurement. </p>
+<p>Regardless, by understanding the direction, length, and color of the arrows, you can quickly grasp the trends and shifts in a given region. <a target="_blank" rel="noopener" href="https://help.flourish.studio/article/541-how-to-create-a-swing-arrow-map">Read our help doc</a> to learn how to create your own arrow map.</p>
+<p><em>Looking for UK map examples? Check out <a href="https://flourish.studio/blog/six-ways-to-visualize-elections/">our blog</a> on visualizing UK political shifts and elections.</em> </p>
+<figure class="text-width">
+<img src="https://public.flourish.studio/uploads/654906/57d95d10-a606-44ea-9ce2-81e803bfb11e.png" alt="">
+<p class="caption">You can find starting points for all examples above in the Flourish <a href="https://app.flourish.studio/templates#template-projection-map" target="_blank">template chooser</a>.
+</p></figure>
+
+<h2 id="Give-context-to-the-numbers-with-an-animated-Gauge"><a href="#Give-context-to-the-numbers-with-an-animated-Gauge" class="headerlink" title="Give context to the numbers with an animated Gauge"></a>Give context to the numbers with an animated Gauge</h2><p>The “needle” has become a popular feature of the <a target="_blank" rel="noopener" href="https://www.nytimes.com/interactive/2018/11/06/us/elections/results-senate-forecast.html">New York Times’ election coverage</a>, providing real-time updates on the probability of each candidate winning the election. It works by analyzing early voting results and making projections based on historical data and current trends. </p>
+<p>And as <a target="_blank" rel="noopener" href="https://www.vox.com/2018/11/6/18068700/midterm-elections-results-predictions-needle">Vox</a> put it some time ago, <em>“The [NYT] election needle is a way to fill in the dead air of election night with science instead of punditry.”</em> </p>
+<figure class="text-width">
+<div class="flourish-embed flourish-gauge" data-src="visualisation/16329069?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16329069/embed?auto=1" style="width: 100%; height: 575px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-gauge"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>Today, the gauge is often seen in political forecast ratings and predictions, such as in <a target="_blank" rel="noopener" href="https://www.politico.com/2022-election/race-forecasts-ratings-and-predictions/">Politico’s</a> forecast across every political district in 2022. And with our <a href="https://flourish.studio/blog/animated-gauge-visualization/"><strong>free Gauge template</strong></a>, you can quickly create your own needle visualization. </p>
+<h2 id="Explain-complex-political-groups-with-a-treemap"><a href="#Explain-complex-political-groups-with-a-treemap" class="headerlink" title="Explain complex political groups with a treemap"></a>Explain complex political groups with a treemap</h2><p>Some of the most important pre- and post-election reporting involves explaining the unique characteristics of different electoral systems. Creating graphics is often the simplest way to do that explanation, and Flourish has a lot of templates that can help.</p>
+<figure class="text-width">
+<div class="flourish-embed flourish-hierarchy" data-src="visualisation/16283698?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16283698/embed?auto=1" style="width: 100%; height: 831.188px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-hierarchy"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>To take an example from the European Parliament: one of the most confusing things about the EU Parliament (and one of the most difficult things to explain to readers) is how each of the national parties fit into each of the larger, EU-wide political party groups. In anticipation of that difficulty, we’ve made a <a href="https://flourish.studio/blog/hierarchy-diagrams-sunburst-packed-circle/">Hierarchy chart</a> showing every national party and its corresponding grouping. </p>
+<h2 id="Show-the-how-and-why-of-the-elections-with-bar-charts-and-scatter-plots"><a href="#Show-the-how-and-why-of-the-elections-with-bar-charts-and-scatter-plots" class="headerlink" title="Show the how and why of the elections with bar charts and scatter plots"></a>Show the how and why of the elections with bar charts and scatter plots</h2><p>The elections don’t just end on election night – in fact, <strong>post-election analysis</strong> is also a major part of any election coverage. In the aftermath of the election, readers don’t just want to know who won or what happened, but how it happened and what are some other outcomes of the vote. </p>
+<figure class="wide">
+<div class="flourish-embed flourish-scatter" data-src="visualisation/16321086?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16321086/embed?auto=1" style="width: 100%; height: 650px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-scatter"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>Flourish’s more basic templates are an easy way to provide readers with analysis visually and quickly. In addition to showing the relationship between two main variables — in this example, the median income of each US congressional district and the share of votes cast in that district for Joe Biden in 2020, our <a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-scatter">Scatter template</a> also enables you to visualize secondary variables, such as dot color and size. </p>
+<figure class="text-width">
+<div class="flourish-embed" data-src="story/2133119?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/story/2133119/embed?auto=1" style="width: 100%; height: 668px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>In the example above, we’ve used a <strong>stacked column chart</strong> to visualize the record number of women voted into Congress since the last US election. By creating a <a target="_blank" rel="noopener" href="https://help.flourish.studio/article/13-creating-a-story">Flourish story</a>, we can simultaneously show both the number of women serving in the House and Senate, and the percentage of seats they take in comparison to male representatives. </p>
+<p>And if you’d like to go for a more <strong>infographic representation</strong> of your analysis, you can choose our <a href="https://flourish.studio/blog/pictogram-isotype/">Pictogram template</a> which allows you to visualize any stats with custom icons. </p>
+<figure class="text-width">
+<div class="flourish-embed flourish-pictogram" data-src="visualisation/16285147?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16285147/embed?auto=1" style="width: 100%; height: 411.25px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates"><div class="btn cta">Create your own »</div></a></figure>
+
+<h2 id="Animate-the-political-race-with-racing-bar-and-line-charts"><a href="#Animate-the-political-race-with-racing-bar-and-line-charts" class="headerlink" title="Animate the political race with racing bar and line charts"></a>Animate the political race with racing bar and line charts</h2><p>There’s no denying that there is something compelling about racing charts. Whether it’s the competition aspect that tickles our curiosity or the animation that keeps us glued to the screen, these visualizations are both entertaining and versatile. </p>
+<p>They also work really well <strong>in elections context</strong> – in fact, bar chart and line chart races are particularly good for visualizing the polling of volatile races, because the animation gives you an almost physical sense of the contest — the peaks, the troughs, and the changes in position. </p>
+<figure class="text-width">
+<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/16294933?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16294933/embed?auto=1" style="width: 100%; height: 497.281px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-bar-chart-race"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>For instance, on the day after the election, in a piece breaking down how a certain race turned out, a <strong><a href="https://flourish.studio/blog/line-chart-race-updates/">Line Chart Race</a></strong> (also known as a Horserace chart) can also provide a bit of recall, reminding readers of the narrative turns they may have forgotten.</p>
+<figure class="text-width">
+<div class="flourish-embed flourish-chart" data-src="visualisation/19109003?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/19109003/embed?auto=1" style="width: 100%; height: 575px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-horserace"><div class="btn cta">Create your own »</div></a></figure>
+
+<h2 id="Visualize-polling-data-and-add-timestamps-to-show-how-current-your-data-is"><a href="#Visualize-polling-data-and-add-timestamps-to-show-how-current-your-data-is" class="headerlink" title="Visualize polling data and add timestamps to show how current your data is"></a>Visualize polling data and add timestamps to show how current your data is</h2><p>Besides our Line Chart Race above, Flourish offers several options to create a voting intention chart. </p>
+<p>The line chart below shows who is ahead in the national polls in the 2024 presidential race. </p>
+<p>Adding axis highlights to your chart allows you to mark events that may have influenced the polls, for example the notable event of Biden suspending his campaign.</p>
+<figure class="text-width">
+<div class="flourish-embed flourish-chart" data-src="visualisation/19109251?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/19109251/embed?auto=1" style="width: 100%; height: 575px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-line-bar-pie"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>You can use our <strong>Scatter</strong> template to create a voting intention chart. The visualization below shows support for the Democrats and Republicans since April 2023. Using the Scatter template, we can combine individual polls (visualized as dots) and the overall average (visualized as line) for each party.</p>
+<figure class="text-width">
+<div class="flourish-embed flourish-chart" data-src="visualisation/19109438?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/19109438/embed?auto=1" style="width: 100%; height: 575px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-scatter"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>Do you have a live-updating polling chart and want to let your readers know how current the data is? In Flourish, you can add a timestamp to the footer of your chart showing when a chart was last updated. No more scratching your head and wondering how current a visualization is!</p>
+<p>Check out our timestamps in the two charts above and learn how to add them to your visualizations <a target="_blank" rel="noopener" href="https://helpcenter.flourish.studio/hc/en-us/articles/10143759583631-How-to-add-a-last-updated-timestamp-to-your-visualizations">in our help doc</a>. </p>
+<p>To see more examples of visualizing polling intentions, check out <a href="https://flourish.studio/blog/visualize-elections-2022/">our blog post</a>. </p>
+<h2 id="Give-the-readers-a-chance-to-explore-the-data-with-a-Survey-visualization"><a href="#Give-the-readers-a-chance-to-explore-the-data-with-a-Survey-visualization" class="headerlink" title="Give the readers a chance to explore the data with a Survey visualization"></a>Give the readers a chance to explore the data with a Survey visualization</h2><p>In the end, giving readers a simple way to <strong>explore election data themselves</strong> can be an effective form of journalism. With our <a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-survey">Survey template</a>, you can import election outcomes so that readers can sort, color, filter, and interrogate the data with minimal interference from you. </p>
+<figure class="text-width">
+<div class="flourish-embed" data-src="story/2136190?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/story/2136190/embed?auto=1" style="width: 100%; height: 658px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-survey"><div class="btn cta">Create your own »</div></a></figure>
+
+<p>You can add any relevant information you’d like readers to sort by – from party association to demographic information such as age, gender, education, and others. Meanwhile, if you’d like to focus on a specific aspect of your dataset, you can <a target="_blank" rel="noopener" href="https://help.flourish.studio/article/99-how-to-create-a-flourish-story-with-the-survey-template">create a Survey story</a> that walks the reader through your dataset – as we did in the example above.</p>
+<p>Alternatively, use our <a href="https://flourish.studio/blog/how-make-interactive-table/"><strong>Table</strong> template</a> to build a searchable database of representatives.</p>
+<figure class="text-width">
+<div class="flourish-embed flourish-table" data-src="visualisation/16320547?654906"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16320547/embed?auto=1" style="width: 100%; height: 739.812px;"></iframe></div>
+</figure>
+<figure class="text-width"><a target="_blank" rel="noopener" href="https://app.flourish.studio/templates#template-table"><div class="btn cta">Create your own »</div></a></figure>
+
+<h2 id="Updating-Flourish-visualizations-on-election-night"><a href="#Updating-Flourish-visualizations-on-election-night" class="headerlink" title="Updating Flourish visualizations on election night"></a>Updating Flourish visualizations on election night</h2><p>One of the best things about using Flourish to cover an election is that it allows you to <strong>update visualizations in real time</strong>. There are two different ways to do this:</p>
+<ul>
+<li>Update the data in Flourish and automatically republish your charts</li>
+<li>Use our Flourish API for live data</li>
+</ul>
+<p>The first option can be achieved by using our <strong>premium Live CSV feature</strong> –  you can pull data from a remote source and republish graphics automatically when the data changes. This <strong>significantly simplifies the updating process</strong> – read more in our <a href="https://flourish.studio/blog/live-data/">blog post</a>.</p>
+<p>The second option requires having a developer who can connect a Flourish visualization to a live data source using the <strong><a target="_blank" rel="noopener" href="https://developers.flourish.studio/api/introduction/">Flourish API</a></strong>. The difference between the API and editor-built charts is that the API allows you to compose and manipulate these components entirely programmatically.</p>
+<p>Interested in any of those options? <a href="https://flourish.studio/talk-to-us/">Reach out</a> to our sales team to elevate your website with engaging narratives. </p>
+<h2 id="Looking-for-more-election-coverage"><a href="#Looking-for-more-election-coverage" class="headerlink" title="Looking for more election coverage?"></a>Looking for more election coverage?</h2><iframe width="560" height="394" src="https://www.youtube.com/embed/ApvWXuxoE-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>We hope these examples inspire your elections coverage and help you communicate your data in a meaningful and insightful way. To learn how to make some of these charts yourself, watch our webinar “How to effectively visualize elections data” on our YouTube channel.</p>
+<figure class="wide">
+<div class="flourish-embed flourish-cards" data-src="visualisation/16160123?64721"><script src="https://public.flourish.studio/resources/embed.js" data-ot-ignore=""></script><iframe scrolling="no" frameborder="0" title="Interactive or visual content" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation" src="https://flo.uri.sh/visualisation/16160123/embed?auto=1" style="width: 100%; height: 397.875px;"></iframe></div>
+</figure>
+			
+			
+		</div>
+		
+
+		
+		<footer class="article-footer">
+			<div class="article-newsletter">
+				<h3><span class="enjoyed">Enjoyed this blog post?</span> <span>Get&nbsp;the&nbsp;newsletter!</span></h3>
+				<form action="https://studio.us13.list-manage.com/subscribe/post?u=a41ac2fe0fc0d1ab52f5df1b9&amp;id=190848d56d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+					<input type="email" style="display: inline-block;" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+					<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_a41ac2fe0fc0d1ab52f5df1b9_190848d56d" tabindex="-1" value=""></div>
+					<div class="clear" style="display: inline-block;"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn_mailchimp"></div>
+				</form>
+				<div class="smallprint" style="line-height: 1.4em;">
+					By clicking "Subscribe", you agree to receive news and updates about Flourish products and services (unsubscribe any time). Read our <a href="https://flourish.studio/privacy/" target="_blank">Privacy Policy</a>. Newsletter powered by Mailchimp (<a href="https://mailchimp.com/legal/" target="_blank">privacy</a>).</div>
+				<!-- <div class="smallprint">Powered by Mailchimp (<a target="_blank" rel="noopener" href="https://mailchimp.com/legal/">privacy</a>).</div> -->
+			</div>
+			
+			
+<nav id="article-nav">
+  
+    <a href="/blog/visualizing-100-years-of-elections/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Next <i class="fa fa-arrow-right"></i></strong>
+      <div class="article-nav-title">
+        
+          Visualizing 100 years of US elections with interactive maps
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/animated-point-map/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><i class="fa fa-arrow-left"></i> Previous</strong>
+      <div class="article-nav-title">How to create animated 3D point maps without coding</div>
+    </a>
+  
+</nav>
+
+		</footer>
+		
+	</div>
+</article>
+			</div>
+			<div class="bottom-bar">
+				<div class="text-width bottom-bar-inner">
+					<a href="/blog" class="blog-home">≪ Blog home</a>
+					<span class="social-buttons bottom">
+						<div class="clickable social-button facebook"><img class="social-icon" src="/images/icons/facebook-logo.svg"></div>
+						<div class="clickable social-button twitter"><img class="social-icon" src="/images/icons/x-logo-black.svg"></div>
+						<div class="clickable social-button linkedin"><img class="social-icon" src="/images/icons/linkedin-logo-black.svg"></div>
+						<div class="clickable social-button email"><img class="social-icon" src="/images/icons/envelope-icon.svg"></div>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+	</div>
+
+	<div class="row footer" data-section="footer">
+    <div class="row-contents">
+        <div class="row-inner">
+            <div class="footer-container">
+                <!-- Company section -->
+                <div class="footer-section company" data-section-group="company">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/company/" data-track="click" data-component="about">About us</a></li>
+                        <li><a target="_blank" rel="noopener" href="https://www.lifeatcanva.com/en/locations/united-kingdom/" data-track="click" data-component="careers">Careers</a></li>
+                        <li><a href="/security/" data-track="click">Security</a></li>
+                        <li><a href="/pricing/" data-track="click">Pricing</a></li>
+                        <li><a href="/terms/" data-track="click">Terms</a></li>
+                        <li><a href="/privacy/" data-track="click">Privacy policy</a></li>
+                        <li><a href="/resources/faq/" data-track="click">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Explore section -->
+                <div class="footer-section explore" data-section-group="explore">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="/examples/" data-track="click">Examples</a></li>
+                        <li><a href="/resources/elections/" data-track="click">Elections &amp; polls</a></li>
+                        <li><a href="/resources/sports/" data-track="click">Sports &amp; competitions</a></li>
+                        <li><a href="/visualisations/maps/" data-track="click">Interactive maps</a></li>
+                        <li><a href="/resources/visualize-survey-data/" data-track="click" data-component="survey">Survey responses</a></li>
+                        <li><a href="/visualisations/scrollytelling/" data-track="click">Scrollytelling</a></li>
+                        <li><a href="/visualisations/" data-track="click">Chart guides</a></li>
+                        <li><a href="/blog/" data-track="click">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Solutions section -->
+                <div class="footer-section solutions" data-section-group="solutions">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="/solutions/financial-services/" data-track="click" data-component="financial">Financial services</a></li>
+                        <li><a href="/solutions/professional-services/" data-track="click" data-component="professional">Professional services</a></li>
+                        <li><a href="/solutions/newsrooms/" data-track="click">Newsrooms</a></li>
+                        <li><a href="/solutions/marketing/" data-track="click">Marketing</a></li>
+                        <li><a href="/solutions/not-for-profit/" data-track="click" data-component="nonprofit">Nonprofits</a></li>
+                        <li><a href="/solutions/government/" data-track="click">Government</a></li>
+                        <li><a href="/solutions/education/" data-track="click">Education</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources section -->
+                <div class="footer-section resources" data-section-group="resources">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/whats-new/" data-track="click" data-component="whats_new">What's new</a></li>
+                        <li><a target="_blank" rel="noopener" href="https://help.flourish.studio/" data-track="click" data-component="help_docs">Help docs</a></li>
+                        <li><a href="/resources/training/" data-track="click" data-component="training">Training</a></li>
+                        <li><a href="/resources/webinar/" data-track="click" data-component="webinars">Webinars</a></li>
+                        <li><a href="/resources/datasets/" data-track="click" data-component="datasets">Datasets</a></li>
+                        <li><a href="/accessibility/" data-track="click" data-component="accessibility">Accessibility</a></li>
+                        <li><a href="/experts/" data-track="click" data-component="experts">Experts network</a></li>
+                        <li><a target="_blank" rel="noopener" href="https://developers.flourish.studio/" data-track="click" data-component="developers">For developers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company info -->
+                <div class="footer-section company-info">
+                    <h4>Flourish</h4>
+                    <p class="break-text">Flourish is a registered trademark of <span>Canva UK Operations Ltd, UK</span></p>
+                    <p>company 08825531</p>
+                    <p>33 Hoxton Square</p>
+                    <p>London N1 6NN</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stay in touch section -->
+        <div class="footer-container-black">
+            <div class="row-inner">
+                <div class="footer-section stay-in-touch">
+                    <h4>Stay in touch</h4>
+                    <div class="footer-row-items">
+                        <div class="btn-social-container">
+                            <a href="/newsletter/" data-track="click" data-component="newsletter">
+                                <div class="footer-btn">Subscribe to our newsletter</div>
+                            </a>
+                            <div class="social-links" data-section-group="social">
+                                <a target="_blank" rel="noopener" href="https://x.com/f_l_o_u_r_i_s_h" aria-label="X" data-track="click" data-component="x">
+                                    <img class="icon" src="/images/icons/x-logo.svg" alt="">
+                                </a>
+                                <a target="_blank" rel="noopener" href="https://www.instagram.com/madewithflourish/" aria-label="instagram" data-track="click" data-component="instagram">
+                                    <img class="icon" src="/images/icons/instagram-logo.svg" alt="">
+                                </a>
+                                <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/f-l-o-u-r-i-s-h" aria-label="LinkedIn" data-track="click" data-component="linkedin">
+                                    <img class="icon" src="/images/icons/linkedin-logo.svg" alt="">
+                                </a>
+                                <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCWTf4OgEH_MiDvfmjPdkTxg" aria-label="YouTube" data-track="click" data-component="youtube">
+                                    <img class="icon" src="/images/icons/youtube-logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer-credit">
+                            <p>© 2026 Flourish, a Canva UK Operations Limited brand. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<script src="/js/script.js?6ef3e8d1634f050d286e14fa2b4fa412"></script>
+
+	
+<script src="/js/store-inbound-fields.js"></script>
+
+
+	
+	
+<script src="/js/blog-post.js"></script>
+
+	
+
+
+
+
+
+<div id="onetrust-consent-sdk"><div class="onetrust-pc-dark-filter ot-hide ot-fade-in"></div><div id="onetrust-banner-sdk" class="otFloatingRounded otRelFont ot-bottom-left ot-wo-title ot-buttons-fw" role="region" aria-label="Cookie banner"><div class="ot-sdk-container" role="alertdialog" aria-describedby="onetrust-policy-text" aria-label="Privacidad"><div class="ot-sdk-row"><div id="onetrust-group-container" class="ot-sdk-twelve ot-sdk-columns"><div id="onetrust-policy"><p id="onetrust-policy-text">Al hacer clic en “Aceptar todas las cookies”, usted acepta que las cookies se guarden en su dispositivo para mejorar la navegación del sitio, analizar el uso del mismo, y colaborar con nuestros estudios para marketing.</p></div></div><div id="onetrust-button-group-parent" class="ot-sdk-twelve ot-sdk-columns has-reject-all-button"><div id="onetrust-button-group"><div class="onetrust-banner-options"><button id="onetrust-reject-all-handler">Rechazarlas todas</button> <button id="onetrust-accept-btn-handler">Aceptar todas las cookies</button></div><button id="onetrust-pc-btn-handler">Configuración de cookies</button></div><div class="banner_logo"></div></div><!-- Close Button --><div id="onetrust-close-btn-container"></div><!-- Close Button END--></div></div></div></div></body></html>
