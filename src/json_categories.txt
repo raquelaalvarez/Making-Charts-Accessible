@@ -1,0 +1,17 @@
+ideally, we would like the model to generate an item chart like:
+
+chart {
+    id:
+    https:
+    title:
+    subtitle:
+    edge x:
+    edge y:
+    legend:
+    chart_type:
+    description:
+    main_values:
+    trends:
+    anomalies:
+    takeaways:
+}

@@ -79,7 +79,7 @@ def extract_alt_from_svg(page, svg_locator) -> str:
 # Core render logic
 # ---------------------------------------------------------------------------
 
-def render_url(url: str, images_dir: Path, html_dir: Path) -> dict:
+def extract_info_from_url(url: str, images_dir: Path, html_dir: Path) -> dict:
     """
     Procesa una URL y devuelve un dict con los resultados.
     """
@@ -232,7 +232,7 @@ def run_pipeline(input_csv: str, output_dir: str, url_column: str = "url"):
         t0 = time.time()
 
         try:
-            result = render_url(url, images_dir, html_dir)
+            result = extract_info_from_url(url, images_dir, html_dir)
         except Exception as e:
             result = {
                 "url": url, "status": "error", "error": str(e),
